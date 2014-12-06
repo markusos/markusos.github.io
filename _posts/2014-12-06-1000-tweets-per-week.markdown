@@ -75,6 +75,8 @@ Now we only need to push the messages on to the queue and Beanstalked will take 
 We use Laravel's built in Queue component to post the job to Beanstalkd. Since I want the tweets spread out I use the [Queue::later()](http://laravel.com/docs/4.2/queues#basic-usage) function, which allows us to add a date and time for when the job should be processed.
 
 {% highlight php %}
+<?php
+
 $date = Carbon::now()->addMinutes($tweet->delay);
 Queue::later($date, 'QueueTweet@tweet',
 	array(
