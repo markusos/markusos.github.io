@@ -5,12 +5,12 @@ date:   2014-12-06 12:00:00
 categories: engage
 ---
 
-How do you process and post thowsands of tweets in a week? This was one of my first projects at Engage; To scrape data and generate tweets for all new records fetched from an external API. Your first thought might be to store the data in a database and just remove or flag the record when it has been processed and the tweet has been posted. This might work depending on your setup, but it is not a [good solution](http://programmers.stackexchange.com/questions/231410/why-database-as-queue-so-bad). A better solution is to use a work queue system, like [Beanstalkd](http://kr.github.io/beanstalkd/) to solve the problem.
+How do you process and post thowsands of tweets in a week? This was one of my first projects at Engage; To scrape data and generate tweets for all new records fetched from an external API. Your first thought might be to store the data in a database and just remove or flag the record when it has been processed and the tweet has been posted. This might work depending on your setup, but it is not a [good solution](http://programmers.stackexchange.com/questions/231410/why-database-as-queue-so-bad). A better solution is to use a work queue system, like [Beanstalkd](http://kr.github.io/beanstalkd/), to solve the problem.
 
 > Beanstalk is a simple, fast work queue.
 > Its interface is generic, but was originally designed for reducing the latency of page views in high-volume web applications by running time-consuming tasks asynchronously.
 
-Lets use the Laravel framework and tools to quickly solve this problem. Since Laravel comes a built in queue component that handles multiple queueing services, including Beanstalkd it's easy to setup.
+Lets use the Laravel framework and tools to quickly build something that works. Since Laravel comes with a built in queue component that handles multiple queueing services, including Beanstalkd, it's easy to setup.
 
 Use Composer to add the library for Beanstalkd:
 
@@ -18,7 +18,7 @@ Use Composer to add the library for Beanstalkd:
 $ composer require pda/pheanstalk
 {% endhighlight %}
 
-To send the tweets I used the library [j7mbo/twitter-api-php](https://github.com/J7mbo/twitter-api-php). Lets use composer to add that too:
+To send the tweets I used the library [twitter-api-php](https://github.com/J7mbo/twitter-api-php). Lets use Composer to add that too:
 
 {% highlight php %}
 $ composer require j7mbo/twitter-api-php
@@ -34,7 +34,9 @@ The Composer.json file should now contain something like this:
 	},
 {% endhighlight %}
 
-Using Laravel together with Beanstalk and j7mbo/twitter-api-php makes is really simple to queue and send tweets just when you want them posted. First we need to setup a class to handle the jobs that we push on the queue. Create a file QueueTweet.php in your project with the following code:
+Using Laravel together with Beanstalk and the twitter-api-php makes is really simple to queue and send tweets just when you want them posted.
+
+First we need to setup a class to handle the jobs that we push on the queue. Create a file QueueTweet.php in your project with the following code:
 
 {% highlight php %}
 <?php
@@ -69,7 +71,8 @@ class QueueTweet {
 {% endhighlight %}
 
 Now we only need to push the messages on to the queue and Beanstalked will take care of the rest.
-We use Laravel's built in Queue component to post the job to beanstalkd. Since I want the tweets spread out I use the *Queue::later()* function, which allows us to add a date and time for when the job should be processed.
+
+We use Laravel's built in Queue component to post the job to Beanstalkd. Since I want the tweets spread out I use the [Queue::later()](http://laravel.com/docs/4.2/queues#basic-usage) function, which allows us to add a date and time for when the job should be processed.
 
 {% highlight php %}
 $date = Carbon::now()->addMinutes($tweet->delay);
@@ -86,7 +89,8 @@ $ beanstalkd
 $ php artisan queue:listen
 {% endhighlight %}
 
-If everything works out as it should, you should see the tweets showing up at the set date and time.
+If everything works out as it should, you should see the tweets showing up on Twitter at the set date and time.
+
 If you run into problems and want to inspect Beanstalkd's queue you can use telnet to connect to the service and display stats for the different queues.
 
 {% highlight php %}
