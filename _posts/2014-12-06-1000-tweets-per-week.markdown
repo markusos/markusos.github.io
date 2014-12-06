@@ -3,6 +3,7 @@ layout: post
 title:  "1000 tweets per week"
 date:   2014-12-06 12:00:00
 categories: engage
+comments: true
 ---
 
 How do you process and post thowsands of tweets in a week? This was one of my first projects at Engage; To scrape data and generate tweets for all new records fetched from an external API. Your first thought might be to store the data in a database and just remove or flag the record when it has been processed and the tweet has been posted. This might work depending on your setup, but it is not a [good solution](http://programmers.stackexchange.com/questions/231410/why-database-as-queue-so-bad). A better solution is to use a work queue system, like [Beanstalkd](http://kr.github.io/beanstalkd/), to solve the problem.
