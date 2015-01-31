@@ -29,9 +29,9 @@ The Composer.json file should now contain something like this:
 
 {% highlight php %}
 "require": {
-    "laravel/framework": "4.2.*",
-    "pda/pheanstalk": "~2.0",
-    "j7mbo/twitter-api-php": "dev-master"
+	"laravel/framework": "4.2.*",
+	"pda/pheanstalk": "~2.0",
+	"j7mbo/twitter-api-php": "dev-master"
   },
 {% endhighlight %}
 
@@ -48,27 +48,27 @@ class QueueTweet {
 
   public function tweet($job, $data)
   {
-    $settings = array(
-      'oauth_access_token' => 'YOUR_OAUTH_ACCESS_TOKEN',
-      'oauth_access_token_secret' => 'YOUR_OAUTH_ACCESS_TOKEN_SECRET',
-      'consumer_key' => 'YOUR_CONSUMER_KEY',
-      'consumer_secret' => 'YOUR_CONSUMER_SECRET',
-    );
+	$settings = array(
+	  'oauth_access_token' => 'YOUR_OAUTH_ACCESS_TOKEN',
+	  'oauth_access_token_secret' => 'YOUR_OAUTH_ACCESS_TOKEN_SECRET',
+	  'consumer_key' => 'YOUR_CONSUMER_KEY',
+	  'consumer_secret' => 'YOUR_CONSUMER_SECRET',
+	);
 
-    $url = 'https://api.twitter.com/1.1/statuses/update.json';
-    $requestMethod = 'POST';
+	$url = 'https://api.twitter.com/1.1/statuses/update.json';
+	$requestMethod = 'POST';
 
-    $postFields = array(
-      'status' => $data['message'],
-    );
+	$postFields = array(
+	  'status' => $data['message'],
+	);
 
-    $twitter = new TwitterAPIExchange($settings);
+	$twitter = new TwitterAPIExchange($settings);
 
-    $twitter->setPostfields($postFields)
-      ->buildOauth($url, $requestMethod)
-      ->performRequest();
+	$twitter->setPostfields($postFields)
+	  ->buildOauth($url, $requestMethod)
+	  ->performRequest();
 
-    $job->delete();
+	$job->delete();
   }
 }
 {% endhighlight %}
@@ -85,7 +85,7 @@ We use Laravel's built in [Queue component](http://laravel.com/docs/4.2/queues#b
 $date = Carbon::now()->addMinutes($tweet->delay);
 Queue::later($date, 'QueueTweet@tweet',
   array(
-    'message' => $tweet->message
+	'message' => $tweet->message
   ));
 {% endhighlight %}
 
@@ -108,3 +108,5 @@ $ stats-job <id>	# show detaild stats of a job, peek-delayed wil give you the id
 {% endhighlight %}
 
 More commands for Beanstalkd can be found [here](https://github.com/kr/beanstalkd/blob/master/doc/protocol.txt).
+
+A sample implementation can be found on [Github](https://github.com/markusos/Twitter-Queue)
