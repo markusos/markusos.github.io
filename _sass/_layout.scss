@@ -121,13 +121,13 @@
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+    width:         calc(30% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(25% - (#{$spacing-unit} / 2));
+    width:         calc(25% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
@@ -233,4 +233,19 @@
             font-size: 18px;
         }
     }
+}
+
+/**
+* Other
+*/
+
+.me {
+    width: 200px;
+    height: 200px;
+}
+
+.jumbotron {
+  border: 1px solid $blue-color-dark;
+  border-radius: 6px;
+  background: darken($background-color, 2%);
 }
