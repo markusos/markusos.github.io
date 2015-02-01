@@ -121,18 +121,15 @@
 }
 
 .footer-col-1 {
-    width: -webkit-calc(30% - (#{$spacing-unit} / 2));
-    width:         calc(30% - (#{$spacing-unit} / 2));
+    width: 30%;
 }
 
 .footer-col-2 {
-    width: -webkit-calc(25% - (#{$spacing-unit} / 2));
-    width:         calc(25% - (#{$spacing-unit} / 2));
+    width: 25%;
 }
 
 .footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
+    width: 45%;
 }
 
 @include media-query($on-laptop) {
@@ -242,6 +239,7 @@
 .me {
     width: 200px;
     height: 200px;
+    margin-bottom: $spacing-unit;
 }
 
 .jumbotron {
