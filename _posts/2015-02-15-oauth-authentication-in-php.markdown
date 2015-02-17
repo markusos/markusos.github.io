@@ -6,7 +6,7 @@ categories: projects
 comments: true
 ---
 
-Setting up OAuth doesn't have to be a pain. There are tons of well written and documented libraries for OAuth out there that are easy to use. If you want to authenticate against one of the larger sites on the web, like Facebook and Google, chances are that you don't have to do much more then installing the library and setting up some routs for the auth callback. In this post I'm going to walk through a slightly more complex senario, where we are gonna authenticate against [Basecamps](basecamp.com) API.
+Setting up OAuth doesn't have to be a pain. There are tons of well written and documented libraries for OAuth out there that are easy to use. If you want to authenticate against one of the larger sites on the web, like Facebook and Google, chances are that you don't have to do much more then installing the library and setting up some routs for the auth callback. In this post I'm going to walk through a slightly more complex senario, where we are gonna authenticate against [Basecamps](http://basecamp.com) API.
 
 
 First thing we need to do is to download the OAuth library that we want to use. In this post I'm gonna use the [league/oauth2-client](https://github.com/thephpleague/oauth2-client) which is a well tested PHP library for OAuth2 authentication. We do this by using composer.
