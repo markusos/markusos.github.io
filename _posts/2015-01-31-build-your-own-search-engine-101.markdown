@@ -2,7 +2,7 @@
 layout: post
 title:  "Build your own Search Engine 101"
 date:   2015-01-31 12:00:00
-categories: search
+categories: projects
 comments: true
 ---
 
@@ -46,7 +46,7 @@ tokenize("This is a document!") => ['this', 'is', 'a', 'document']
 
 The most simple tokenizer just split the input string on space and other punctuation characters. More advanced ones tokenizer different inflections of the same word to the same token, e.g. the words ‘searched’ and ‘searching’ will both be tokenized to the base form ‘search’. This often requires a language model that the tokens can be fitted against.
 
-For now we can see tokenization as splitting a text into an array of the tokens it contains.
+For now, we can see tokenization as splitting a text into an array of the tokens it contains.
 
 ##Finding what we want
 
