@@ -12,11 +12,11 @@ Basecamp is an effective project management tool, one that our teams use every d
 
 Introducing OverView, a project management tool for Basecamp. OverView provides a quick and clear summary of all active tasks for each team member across all Basecamp projects.
 
-![Screenshot]({{ site.url }}assets/overview_screenshot.png)
+![Screenshot]({{ site.url }}assets/overview_screenshot.png){: .center-image }
 
 The interface is simple and clean; it is designed to make it easy for project managers to quickly organize team members and arrange them in an order that is most beneficial to them.
 
-![Demo]({{ site.url }}assets/overview_demo.gif)
+![Demo]({{ site.url }}assets/overview_demo.gif){: .center-image }
 
 OverView makes it possible to efficiently see upcoming deadlines and makes it easy to follow up on a project’s progress. Under each team member, tasks can be sorted by project name or by date. Here at Engage, our project manager uses the sort by date feature every day to ensure that project deadlines are met and tasks are complete on time or ahead of schedule.
 

@@ -9,4 +9,4 @@ A little more than a month ago I left almost everything back in Sweden to go to 
 
 I'm gonna use this site to share my experiences and some of the things that I learn during my adventures here in the US.
 
-![Lincoln Memorial]({{ site.url }}assets/lincoln.jpg)
+![Lincoln Memorial]({{ site.url }}assets/lincoln.jpg){: .center-image }
