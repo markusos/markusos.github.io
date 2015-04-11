@@ -109,4 +109,4 @@ So there we have it; a somewhat worthless piece of code that automatically play 
 
 And one last thing. Try beating it yourself, if you can:
 
-![Kuku-Kube HighScore]({{ site.url }}assets/KukuKubeHighScore){: .center-image }
+![Kuku-Kube HighScore]({{ site.url }}assets/KukuKubeHighScore.png){: .center-image }
