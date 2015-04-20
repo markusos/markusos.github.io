@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Automatically solve Kuku-Kube with JavaScript."
+title:  "Automatically solve Kuku-Kube with JavaScript"
 date:   2015-04-10 23:59:00
 categories: engage
 comments: true
@@ -16,7 +16,7 @@ After giving it a few tries I came up with the idea of writing a script that aut
 
 ![Kuku-Kube Hard]({{ site.url }}assets/KukuKubeHard.png){: .center-image }
 
-I wanted the script to play the perfect game, so just clicking on every square was out of the question. That is to easy and can be done with just a few lines of javascript.
+I wanted the script to play the perfect game, so just clicking on every square was out of the question. That is too easy and can be done with just a few lines of javascript.
 
 A few minutes later the first version of the script was ready. The scripts algorithm was designed to as quickly as possible identify a uniquely colored square and then click on it. This is done by inspecting the color of the squares one by one until the script have seen two different colors, where one color has been seen only once and the other has been seen at least twice.
 
