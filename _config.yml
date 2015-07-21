@@ -9,6 +9,8 @@ url: "http://markusos.github.io/"
 twitter_username: markus_ostberg
 github_username:  markusos
 linkedin_username: markusos
+paginate: 10
+paginate_path: "/page/:num/"
 
 # Build settings
 markdown: kramdown
