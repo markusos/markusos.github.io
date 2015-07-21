@@ -14,7 +14,7 @@ layout: default
         </h2>
         {{ post.excerpt }}
 
-        <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+        <a class="btn btn-primary btn-sm" href="{{ post.url | prepend: site.baseurl }}" role="button">Read more</a>
 
       </li>
     {% endfor %}
