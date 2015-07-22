@@ -6,7 +6,7 @@ categories: engage
 comments: true
 ---
 
-Yesterday during my lunch break one of my co-workers introduced me, and the other developers at Engage, to the color puzzle game [Kuku-Kube](http://www.kuku-kube.com/). The goal of the game is to as quickly as possible identify and click on a uniquely colored square in a grid of squares. The game has been featured on an number of big sites during the last day, including [Reddit](http://www.reddit.com/r/InternetIsBeautiful/comments/31xz0w/test_your_color_perception/) and [BusinessInsider](http://www.businessinsider.com/what-is-kukukube-2015-4). This post is about how I build and automatic solver in JavaScript over a lunch break.
+Yesterday during my lunch break one of my co-workers introduced me, and the other developers at Engage, to the color puzzle game [Kuku-Kube](http://www.kuku-kube.com/). The goal of the game is to as quickly as possible identify and click on a uniquely colored square in a grid of squares. The game has been featured on an number of big sites during the last day, including [Reddit](http://www.reddit.com/r/InternetIsBeautiful/comments/31xz0w/test_your_color_perception/) and [Business Insider](http://www.businessinsider.com/what-is-kukukube-2015-4). This post is about how I build and automatic solver in JavaScript over a lunch break.
 
 ![Kuku-Kube Easy]({{ site.url }}assets/KukuKubeEasy.png){: .center-image }
 
