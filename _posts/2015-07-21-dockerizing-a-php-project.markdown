@@ -113,13 +113,26 @@ memcached:
 
 This configuration file defines four different services. When running this configuration, each of these services are started in it's own docker container.
 
- * `build` defines the path to the Dockerfile that should be used to build the container.
- * `image` (alternative to `build`) defines an image on [Docker hub](https://hub.docker.com) to use to build the container.
- * `command` defines the command that will be run inside the container when started.
- * `ports` define the port binding between the docker container and the docker host environment.
- * `links` connects the web container to the listed services. This means that the web container can access data in the databases and Memcached instance.
- * `volumes` mounts volumes from the docker host environment to the service provider container.
- * `environment` defines the system environment variables available to the application running inside the container. Here we define things like hostnames, usernames and passwords used in the application.
+ * `build` 
+  Defines the path to the Dockerfile that should be used to build the container.
+ 
+ * `image` (alternative to `build`)
+  Defines an image on [Docker hub](https://hub.docker.com) to use to build the container.
+ 
+ * `command` 
+  Defines the command that will be run inside the container when started.
+ 
+ * `ports` 
+  Defines the port binding between the docker container and the docker host environment.
+ 
+ * `links` 
+  Connects the web container to the listed services. This means that the web container can access data in the databases and Memcached instance.
+
+ * `volumes` 
+  Mounts volumes from the docker host environment to the service provider container.
+ 
+ * `environment` 
+  Defines the system environment variables available to the application running inside the container. Here we define things like hostnames, usernames and passwords used in the application.
 
 The first one, web, is the Dockerfile we defined before. The following three service providers are defined to use the official images for MySQL, MongoDB and Memcached. They all define the hostname that they are accessible through in the linked web container as well as environment variables. The `command` config row can be used to override the images default command, as seen in the MongoDB provider case.
 
@@ -151,10 +164,10 @@ $ docker images
 $ docker images
 
 # Delete all containers
-docker rm $(docker ps -a -q)
+$ docker rm $(docker ps -a -q)
 
 # Delete all images
-docker rmi $(docker images -q)
+$ docker rmi $(docker images -q)
 
 {% endhighlight %}
 
