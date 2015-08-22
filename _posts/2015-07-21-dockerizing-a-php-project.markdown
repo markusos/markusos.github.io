@@ -6,7 +6,7 @@ categories: projects
 comments: true
 ---
 
-After using Vagrant and VirtualBox at Engage for several months I finally stumbled over a project at work where I got the opportunity to learn learn and use Docker. Inspired by my newly acquired knowledge I wanted to experiment more with Docker so I decided to "Dockerize" my latest side project.
+After using Vagrant and VirtualBox at Engage for several months I finally stumbled over a project at work where I got the opportunity to learn and use Docker. Inspired by my newly acquired knowledge I wanted to experiment more with Docker so I decided to "Dockerize" my latest side project.
 
 > Docker is a platform for developers and sysadmins to develop, ship, and run applications. Docker lets you quickly assemble applications from components and eliminates the friction that can come when shipping code. - [Docker.com](https://www.docker.com/)
 
