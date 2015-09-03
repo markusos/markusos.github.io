@@ -21,13 +21,14 @@ In the basic scrape class below I use the [Guzzle](http://guzzle.readthedocs.org
 <?php namespace Scrape;
 
 /**
- * A basic Web scraper class
+ * A basic web scraper class
  * @author Markus Östberg <markusos@kth.se>
  */
 
-use Guzzle\Http\Client;
-use \DOMDocument;
 use \DOMXPath;
+use \DOMDocument;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ConnectException;
 
 /**
  * Class Scrape
@@ -46,24 +47,34 @@ class Scrape
 
     /**
      * Init scraper to scrape $site
-     * @param $site string Site to scrape
+     * @param string $site Site to scrape
+     * @param int $timeout seconds before request times out. 
      */
-    public function __construct($site)
+    public function __construct($site, $timeout = 2)
     {
-        $this->webClient = new Client($site);
+        $this->webClient = new Client([
+                'base_uri' => $site,
+                'timeout' => $timeout
+            ]);
     }
 
     /**
      * Load sub page to site.
      * E.g, '/' loads the site root page
-     * @param $page string
+     * @param string $page Page to load
      * @return $this
      */
     public function load($page) {
 
-        $response = $this->webClient->get($page)->send();
+        try {
+            $response = $this->webClient->get($page);
+        } catch(ConnectException $e) {
+            throw new \RuntimeException(
+                    $e->getHandlerContext()['error']
+                );
+        }
 
-        $html = $response->getBody(true);
+        $html = $response->getBody();
 
         $this->dom = new DOMDocument;
 
@@ -76,21 +87,8 @@ class Scrape
     }
 
     /**
-     * Get all nodes matching xpath query
-     *  below parent node in DOM tree
-     * @param $xpath string selector to query the DOM
-     * @param $parent \DOMNode to use as query root node
-     * @return \DOMNodeList
-     */
-    public function getNodes($xpath, $parent=null) {
-        $DomXpath = new DOMXPath($this->dom);
-        $nodes = $DomXpath->query($xpath, $parent);
-        return $nodes;
-    }
-
-    /**
      * Get first nodes matching xpath query
-     *  below parent node in DOM tree
+     * below parent node in DOM tree
      * @param $xpath string selector to query the DOM
      * @param $parent \DOMNode to use as query root node
      * @return \DOMNode
@@ -103,6 +101,19 @@ class Scrape
         }
 
         return $nodes[0];
+    }
+
+    /**
+     * Get all nodes matching xpath query
+     * below parent node in DOM tree
+     * @param $xpath string selector to query the DOM
+     * @param $parent \DOMNode to use as query root node
+     * @return \DOMNodeList
+     */
+    public function getNodes($xpath, $parent=null) {
+        $DomXpath = new DOMXPath($this->dom);
+        $nodes = $DomXpath->query($xpath, $parent);
+        return $nodes;
     }
 }
 
