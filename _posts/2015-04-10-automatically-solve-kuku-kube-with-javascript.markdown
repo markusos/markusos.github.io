@@ -49,23 +49,26 @@ var KukuKube = function ($) {
         var start = $('.play-btn:visible');
 
         if (start.size() === 1) {
-            start[0].click();
+            start.first().click();
             solveKukuKube();
         } else {
-            console.log('Could not find start button.')
+            console.log('Could not find start button.');
         }
     }
 
     function solveKukuKube() {
         var boxes = $("#box").find("span");
 
-        var color = boxes[0].style.background;
+        // Get the color of the first box as a baseline
+        var color = boxes.first().css('backgroundColor');
+
         var colorCount = 0, secondColorCount = 0;
         var colorPosition, secondColorPosition;
 
-        for (var i in boxes) {
+        boxes.each(function(i) {
+
             // Count color occurrences
-            if (boxes[i].style.background === color) {
+            if ($(this).css('backgroundColor') === color) {
                 colorCount += 1;
                 colorPosition = i;
             } else {
@@ -73,23 +76,26 @@ var KukuKube = function ($) {
                 secondColorPosition = i;
             }
 
+            // If one color count is exactly one and the other is larger then 2,
+            // then we have found the unique square in the color test.
             if (secondColorCount === 1 && colorCount >= 2) {
                 boxes[secondColorPosition].click();
-                break;
+                return false;
             }
 
             if (colorCount === 1 && secondColorCount >= 2) {
                 boxes[colorPosition].click();
-                break;
+                return false;
             }
-        }
+        });
 
         // Check if game is over
-        if ($('.gameover:visible').size() === 0) {
-            setTimeout(solveKukuKube, 10);
+        if ($('.gameover:visible').size() > 0) {
+            console.log('Game Over!');
         }
         else {
-            console.log('Game Over!');
+            // Game is still running, solve the next one!
+            setTimeout(solveKukuKube, 10);
         }
     }
 
