@@ -76,8 +76,6 @@ var KukuKube = function ($) {
                 secondColorPosition = i;
             }
 
-            // If one color count is exactly one and the other is larger then 2,
-            // then we have found the unique square in the color test.
             if (secondColorCount === 1 && colorCount >= 2) {
                 boxes[secondColorPosition].click();
                 return false;
