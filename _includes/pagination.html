@@ -6,7 +6,7 @@
     
     {% if paginator.previous_page %}
       <li>
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="Previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: 'index.html', '' | replace: '//', '/' }}" aria-label="Previous">
           <span aria-hidden="true">&laquo;</span>
         </a>
       </li>
@@ -18,7 +18,7 @@
       {% if page == paginator.page %}
         <li class="active"><a href="#">{{ page }}</a></li>
       {% elsif page == 1 %}
-        <li><a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+        <li><a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
       {% else %}
         <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
       {% endif %}
