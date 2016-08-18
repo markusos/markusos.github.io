@@ -9,7 +9,7 @@ comments: true
 For many of us, there is something magical with a search engine. You type in a few well selected words and out comes, hopefully, exactly what we are looking for. So how does it work? In this post I'll go through some of the basic building blocks needed for a basic search engine.
 
 
-##Search index
+## Search index
 
 First we need some place to store information about all documents we want to be able to search through, this is usually called a search index. When we do a search, the search index is used to quickly find relevant documents for the entered search query. One of the most basic implementations of a search index is using an inverse map.
 
@@ -36,7 +36,7 @@ The inverse map for these documents would then be:
 
 If I now want to find all documents containing the word "example" we just need to do a lookup in the inverse map with the key "example" to find that Document B is the only indexed document containing that word.
 
-##Tokenization
+## Tokenization
 
 We actually skipped a step here. How did we go from the document “This is a document!” to the array of tokens (or words) in that document? We use a tokenizer!
 
@@ -48,7 +48,7 @@ The most simple tokenizer just split the input string on space and other punctua
 
 For now, we can see tokenization as splitting a text into an array of the tokens it contains.
 
-##Finding what we want
+## Finding what we want
 
 When we input a search query into the search engine we expect to get back relevant documents, and hopefully finding what we are looking for.
 
@@ -58,7 +58,7 @@ We then do a lookup in our search index for all documents that contains any of t
 
 This leads us in on how to rank the found documents on how relevant they are to the given search query.
 
-###TF-IDF
+### TF-IDF
 
 TF-IDF, which stands for Term frequency - inverse document frequency, is a classical metric in information retrieval. It is mainly used as a measure of a term’s importance in a document. TF-IDF is often used in search engines to rank how relevant different documents are to a specific search query.
 
@@ -70,7 +70,7 @@ By multiplying the term frequency with the inverse document frequency, we get th
 
 $$TF-IDF(t, d, C) = \frac{frequency(t,d)}{length(d)} * log_e\left(\frac{size(C)}{count(t, C)}\right)$$
 
-###Cosine similarity
+### Cosine similarity
 
 If we want to allow your search queries to contain more than one word, we need some way of measure how similar a search query is to a document. Cosine similarity is a similarity measure often used in search engines. It treats each document as a vector in a multidimensional space and the measure gives the cosine of the angle between them. This gives us a number between 0 and 1, where 1 represents a perfect match.
 
@@ -105,7 +105,7 @@ d[1] = TF-IDF('architecture', 'computer architecture is a...' , C)
 
 Documents with a higher cosine similarity is then seen as better matches to the query than documents with a low cosine similarity, and they are therefore ranked higher in the result.
 
-##Final words
+## Final words
 
 This post is just touching on some some basic concepts that are used in search engines. There are tonnes of more concepts and techniques used in search engines like Google, but hopefully this got you interested to learn more.
 

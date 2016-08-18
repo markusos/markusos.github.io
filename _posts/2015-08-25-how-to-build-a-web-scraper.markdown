@@ -121,7 +121,7 @@ class Scrape
 
 Now how do we use this class to scrape a Web page? First we need to understand what an XPath is and how to use it.
 
-##XPath
+## XPath
 
 If you've ever written CSS you should know what a CSS selector is. XPaths stands for XML Path Language and is a query language, just like CSS selectors, used for selecting nodes from an XML or HTML DOM tree. Most modern browsers support XPaths in their development console, so press `Ctrl` + `Shift` + `I` if you are on Chrome in Windows or `Cmd` + `Opt` + `I` on Crome in OSX and type in this:
 
@@ -146,7 +146,7 @@ $x('//*[@id="test"]');
 
 {% endhighlight %}
 
-##Putting it all together
+## Putting it all together
 
 Now lets use the scraper class and our knowledge about XPaths to scrape the root page of this site:
 

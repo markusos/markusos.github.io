@@ -12,7 +12,7 @@ I recently challenged myself to start learning CasperJS, a scripting tool that i
 
 The site mapper tool is available on [Github](https://github.com/markusos/site-mapper).
 
-###How to use:
+### How to use:
 
 Install CasperJS, for more instructions see here: [docs.casperjs.org](http://docs.casperjs.org/en/latest/installation.html)
 
