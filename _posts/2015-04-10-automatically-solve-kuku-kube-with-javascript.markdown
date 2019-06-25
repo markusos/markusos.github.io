@@ -8,13 +8,13 @@ comments: true
 
 Yesterday during my lunch break one of my co-workers introduced me, and the other developers at Engage, to the color puzzle game [Kuku-Kube](http://www.kuku-kube.com/). The goal of the game is to as quickly as possible identify and click on a uniquely colored square in a grid of squares. The game has been featured on an number of big sites during the last day, including [Reddit](http://www.reddit.com/r/InternetIsBeautiful/comments/31xz0w/test_your_color_perception/) and [Business Insider](http://www.businessinsider.com/what-is-kukukube-2015-4). This post is about how I build and automatic solver in JavaScript over a lunch break.
 
-![Kuku-Kube Easy]({{ site.url }}assets/KukuKubeEasy.png){: .center-image }
+![Kuku-Kube Easy]({{site.url}}/assets/KukuKubeEasy.png){: .center-image }
 
 It starts of easy, with just a few squares and an significant difference between the colors. But as you play it quickly gets harder. The number of squares increase and the difference in color decrease. After just a few successful clicks there is only a small difference in hue between one square and all the other squares in the grid.
 
 After giving it a few tries I came up with the idea of writing a script that automatically plays the game. The plan was to see what kind of score a perfect player would get compare to the scores we got when we played ourselves.
 
-![Kuku-Kube Hard]({{ site.url }}assets/KukuKubeHard.png){: .center-image }
+![Kuku-Kube Hard]({{site.url}}/assets/KukuKubeHard.png){: .center-image }
 
 I wanted the script to play the perfect game, so just clicking on every square was out of the question. That is too easy and can be done with just a few lines of javascript.
 
@@ -113,4 +113,4 @@ So there we have it; a somewhat worthless piece of code that automatically play 
 
 And one last thing. Try beating it yourself, if you can:
 
-![Kuku-Kube HighScore]({{ site.url }}assets/KukuKubeHighScore.png){: .center-image }
+![Kuku-Kube HighScore]({{site.url}}/assets/KukuKubeHighScore.png){: .center-image }

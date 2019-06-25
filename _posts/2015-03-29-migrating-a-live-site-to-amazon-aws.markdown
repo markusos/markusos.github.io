@@ -12,7 +12,7 @@ The client site has a couple of thousands unique visitors a month. The main reas
 
 The figure below shows how the infrastructure is setup in the new AWS environment.
 
-![AWS Setup]({{ site.url }}assets/AWS_setup.png){: .center-image }
+![AWS Setup]({{site.url}}/assets/AWS_setup.png){: .center-image }
 
 The setup consists of an Elastic Beanstalk setup with two app server web nodes behind a load balancer. They use a AWS RDS Multi-AZ instance to for database storage and a AWS S3 instance for website assets like images and other documents. We also have a separate AWS EC2 instance as a worker server to handle Cron-jobs and queuing tasks for the site.
 

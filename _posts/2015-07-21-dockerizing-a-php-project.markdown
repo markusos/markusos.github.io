@@ -16,7 +16,7 @@ The simple search engine project I worked on a few months back was a perfect can
 
 There are many great tutorials out there, so I'm not going to dive to deeply into how to set up docker on your local machine. If you, like me, are using a Mac for your development I suggest you start of here: [docs.docker.com/installation/mac/](https://docs.docker.com/installation/mac/) to read about what you need to install Docker. In this post I'll use Boot2Docker and Docker-Compose to setup and run my PHP application.
 
-![boot2docker]({{ site.url }}assets/boot2docker.png){: .center-image }
+![boot2docker]({{site.url}}/assets/boot2docker.png){: .center-image }
 
 Since Docker does not run natively on Mac you need to run it inside a Virtual Machine. Boot2Docker is a lightweight VM custom built for running Docker. If you have used Vagrant before, you'll feel right at home. Follow the installation guide in Dockers documentation for Mac and you should be ready in no time. If you already have [VirtualBox](https://www.virtualbox.org/) and my favorite package manager for Mac, [Brew](http://brew.sh/), installed; all you need to do is to run:
 

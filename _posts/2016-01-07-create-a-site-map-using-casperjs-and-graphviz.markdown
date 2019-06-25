@@ -42,6 +42,6 @@ $ sfdp -Tsvg map.dot -o sitemap.svg
 
 This creates an SVG image of the site map. It could look something like this:
 
-[![Site map]({{ site.url }}assets/sitemap.png){: .center-image }]({{ site.url }}assets/sitemap.png)
+[![Site map]({{site.url}}/assets/sitemap.png){: .center-image }]({{site.url}}/assets/sitemap.png)
 
 Have any questions or ways to improve the script? Leave a question here below!

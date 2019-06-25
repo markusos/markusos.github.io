@@ -8,7 +8,7 @@ comments: true
 
 If you're an early adopter, like me, you probably also spent a few hours today installing the latest version of Apple's newest OS X version, [El Capitan (OS X 10.11)](https://www.apple.com/osx/). If you use your Mac for any kind of development, chances are you also have the Mac's missing package manager, [Brew](http://brew.sh/), installed. As with any time Apple releases an update, there is some tinkering to be done to get everything running again. In this post I'll go through some of the problems I ran into with Brew after updating to *El Capitan* and how to solve them.
 
-![El Capitan]({{ site.url }}assets/elcapitan.png){: .center-image }
+![El Capitan]({{site.url}}/assets/elcapitan.png){: .center-image }
 
 The first step is to make sure that the latest version of Brew is installed. To do this, use the command `brew update`. You might run into this error message:
 
