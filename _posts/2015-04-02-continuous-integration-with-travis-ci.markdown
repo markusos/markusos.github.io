@@ -12,7 +12,7 @@ Most of us developers have probably been in a situation where we think every thi
 
 In this post I'm gonna walk through the basics of setting up Travis CI for your GitHub repository.
 
-![Travis CI]({{ site.url }}assets/travis.png){: .center-image }
+![Travis CI]({{site.url}}/assets/travis.png){: .center-image }
 
 The first thing you need to do is to take a look at the [Travis CI website](https://travis-ci.org/) to see what it is all about.
 
