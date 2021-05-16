@@ -3,22 +3,21 @@ layout: post
 title:  "Dockerizing a PHP project - A short introduction"
 date:   2015-07-21 22:30:00
 categories: projects
-comments: true
 ---
 
 After using Vagrant and VirtualBox at Engage for several months I finally stumbled over a project at work where I got the opportunity to learn and use Docker. Inspired by my newly acquired knowledge I wanted to experiment more with Docker so I decided to "Dockerize" my latest side project.
 
 > Docker is a platform for developers and sysadmins to develop, ship, and run applications. Docker lets you quickly assemble applications from components and eliminates the friction that can come when shipping code. - [Docker.com](https://www.docker.com/)
 
-The simple search engine project I worked on a few months back was a perfect candidate for Dockerization since it had dependencies on multiple services, databases and libraries. Running the project on my local machine was a hassle and I had yet to set up a Vagrant box for it.
+The simple search engine project I worked on a few months back was a perfect candidate for Dockerization since it had dependencies on multiple services, databases, and libraries. Running the project on my local machine was a hassle and I had yet to set up a Vagrant box for it.
 
 ### Get Docker up and running
 
-There are many great tutorials out there, so I'm not going to dive to deeply into how to set up docker on your local machine. If you, like me, are using a Mac for your development I suggest you start of here: [docs.docker.com/installation/mac/](https://docs.docker.com/installation/mac/) to read about what you need to install Docker. In this post I'll use Boot2Docker and Docker-Compose to setup and run my PHP application.
+There are many great tutorials out there, so I'm not going to dive too deeply into how to set up Docker on your local machine. If you, like me, are using a Mac for your development I suggest you start here: [docs.docker.com/installation/mac/](https://docs.docker.com/installation/mac/) to read about what you need to install Docker. In this post, I'll use Boot2Docker and Docker-Compose to set up and run my PHP application.
 
 ![boot2docker]({{site.url}}/assets/boot2docker.png){: .center-image }
 
-Since Docker does not run natively on Mac you need to run it inside a Virtual Machine. Boot2Docker is a lightweight VM custom built for running Docker. If you have used Vagrant before, you'll feel right at home. Follow the installation guide in Dockers documentation for Mac and you should be ready in no time. If you already have [VirtualBox](https://www.virtualbox.org/) and my favorite package manager for Mac, [Brew](http://brew.sh/), installed; all you need to do is to run:
+Since Docker does not run natively on Mac you need to run it inside a Virtual Machine. Boot2Docker is a lightweight VM custom-built for running Docker. If you have used Vagrant before, you'll feel right at home. Follow the installation guide in Dockers documentation for Mac and you should be ready in no time. If you already have [VirtualBox](https://www.virtualbox.org/) and my favorite package manager for Mac, [Brew](http://brew.sh/), installed; all you need to do is to run:
 
 {% highlight php %}
 
@@ -29,7 +28,7 @@ $ boot2docker up
 
 {% endhighlight %}
 
-The next step is to install Docker-Compose. It is another great tool, used to defines multi-container applications. It basically keeps track of how to initialize and run applications that needs several docker containers that are linked together. You can read more here: [docs.docker.com/compose/](https://docs.docker.com/compose/)
+The next step is to install Docker-Compose. It is another great tool, used to defines multi-container applications. It basically keeps track of how to initialize and run applications that need several docker containers that are linked together. You can read more here: [docs.docker.com/compose/](https://docs.docker.com/compose/)
 
 {% highlight php %}
 
@@ -57,11 +56,11 @@ ADD . /code
 
 This basic file contains three commands `FROM`, `RUN` and `ADD`:
 
-`FROM ubuntu:latest` pulls the latest official ubuntu container image and uses it as a base for the container. The FROM command is used to define the parent image of the
+`FROM ubuntu:latest` pulls the latest official Ubuntu container image and uses it as a base for the container. The FROM command is used to define the parent image of the
 
-`RUN apt-get update && apt-get install php5 php5-json php5-mysql -y` Updates the system and installs some common php5 dependencies, it is easy to install more dependencies if needed. The following lines with `RUN` commands installs more dependencies and PHP libraries used through the pecl package manager.
+`RUN apt-get update && apt-get install php5 php5-json php5-mysql -y` Updates the system and installs some common php5 dependencies, it is easy to install more dependencies if needed. The following lines with `RUN` commands install more dependencies and PHP libraries used through the pecl package manager.
 
-`ADD . /code` mounts the current directory (the directory where the docker command is ran from) to the code directory inside the container.
+`ADD . /code` mounts the current directory (the directory where the docker command is run from) to the code directory inside the container.
 
 ### Docker-Compose
 
@@ -111,7 +110,7 @@ memcached:
 
 {% endhighlight %}
 
-This configuration file defines four different services. When running this configuration, each of these services are started in it's own docker container.
+This configuration file defines four different services. When running this configuration, each of these services is started in its own Docker container.
 
  * `build` 
   Defines the path to the Dockerfile that should be used to build the container.
@@ -132,9 +131,9 @@ This configuration file defines four different services. When running this confi
   Mounts volumes from the docker host environment to the service provider container.
  
  * `environment` 
-  Defines the system environment variables available to the application running inside the container. Here we define things like hostnames, usernames and passwords used in the application.
+  Defines the system environment variables available to the application running inside the container. Here we define things like hostnames, usernames, and passwords used in the application.
 
-The first one, web, is the Dockerfile we defined before. The following three service providers are defined to use the official images for MySQL, MongoDB and Memcached. They all define the hostname that they are accessible through in the linked web container as well as environment variables. The `command` config row can be used to override the images default command, as seen in the MongoDB provider case.
+The first one, web, is the Dockerfile we defined before. The following three service providers are defined to use the official images for MySQL, MongoDB, and Memcached. They all define the hostname that they are accessible through in the linked web container as well as environment variables. The `command` config row can be used to override the image's default command, as seen in the MongoDB provider case.
 
 We are now ready to build and start the containers and run the application.
 
@@ -145,16 +144,16 @@ $ docker-compose up
 
 {% endhighlight %}
 
-The containers should now be running in your docker container host and should be accessible at the hosts ip on port 8000.
+The containers should now be running in your docker container host and should be accessible at the host's IP on port 8000.
 
-Below follows some good to know commands when getting started with docker.
+Below follows some good to know commands when getting started with Docker.
 
 {% highlight php %}
 
 # SSH into the boot2docker VM
 $ boot2docker ssh
 
-# List running contaiers
+# List running containers
 $ docker ps
 
 # List built docker images

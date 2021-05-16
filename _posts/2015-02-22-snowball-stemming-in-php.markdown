@@ -3,10 +3,9 @@ layout: post
 title:  "Snowball stemming in PHP"
 date:   2015-02-22 17:00:00
 categories: projects
-comments: true
 ---
 
-When working on my PHP search engine I needed a stemmer to improve the tokenization and search index. After some reasearch I foud the [PECL Stem package](http://pecl.php.net/package/stem), which uses the [Snowball Stemming algorithm](http://snowball.tartarus.org/texts/introduction.html) and has suppport for multiple languages. Exactly what I needed! 
+When working on my PHP search engine I needed a stemmer to improve the tokenization and search index. After some research, I found the [PECL Stem package](http://pecl.php.net/package/stem), which uses the [Snowball Stemming algorithm](http://snowball.tartarus.org/texts/introduction.html) and has support for multiple languages. Exactly what I needed!
 
 The PECL Stem package supports the following languages through these functions:
 
@@ -40,7 +39,7 @@ After the extension is installed, make sure that your php.ini file contains the 
 extension="stem.so"
 {% endhighlight %}
 
-Remember to reload apache, or whatever web server you are using.
+Remember to reload apache, or whatever webserver you are using.
 
 To check that if the extension has been correctly loaded by PHP, run:
 {% highlight php %}

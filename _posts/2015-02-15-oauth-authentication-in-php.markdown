@@ -3,13 +3,12 @@ layout: post
 title:  "OAuth authentication in PHP"
 date:   2015-02-17 17:00:00
 categories: projects
-comments: true
 ---
 
-Setting up OAuth doesn't have to be a pain. There are tons of well written and documented libraries for OAuth out there that are easy to use. If you want to authenticate against one of the larger sites on the web, like Facebook and Google, chances are that you don't have to do much more then installing the library and setting up some routs for the auth callback. In this post I'm going to walk through a slightly more complex senario, where we are gonna authenticate against [Basecamps](http://basecamp.com) API.
+Setting up OAuth doesn't have to be a pain. There are tons of well-written and documented libraries for OAuth out there that are easy to use. If you want to authenticate against one of the larger sites on the web, like Facebook and Google, chances are that you don't have to do much more than installing the library and setting up some routs for the auth callback. In this post, I'm going to walk through a slightly more complex scenario, where we are gonna authenticate against [Basecamps](http://basecamp.com) API.
 
 
-First thing we need to do is to download the OAuth library that we want to use. In this post I'm gonna use the [league/oauth2-client](https://github.com/thephpleague/oauth2-client) which is a well tested PHP library for OAuth2 authentication. We do this by using composer.
+The first thing we need to do is to download the OAuth library that we want to use. In this post, I'm gonna use the [league/oauth2-client](https://github.com/thephpleague/oauth2-client) which is a well-tested PHP library for OAuth2 authentication. We do this by using composer.
 
 {% highlight php %}
 
@@ -18,7 +17,7 @@ $ composer update
 
 {% endhighlight %}
 
-Next we need to create a custom OAuth provider for Basecamp, since it is not one of the already implemented OAuth providers in the library. We create a class called BasecampOAuth that extends the Abstract provider from the league/oauth2-client library. All information needed to set this up comes from [Basecamps API documentation](https://github.com/basecamp/api/blob/master/sections/authentication.md).
+Next, we need to create a custom OAuth provider for Basecamp, since it is not one of the already implemented OAuth providers in the library. We create a class called BasecampOAuth that extends the Abstract provider from the league/oauth2-client library. All information needed to set this up comes from [Basecamps API documentation](https://github.com/basecamp/api/blob/master/sections/authentication.md).
 
 {% highlight php %}
 <?php
@@ -96,7 +95,7 @@ class BasecampOAuthProvider extends AbstractProvider {
 }
 {% endhighlight %}
 
-Now we neet to setup the routes to handle the OAuth requests and response.
+Now we need to set up the routes to handle the OAuth requests and response.
 
 Using Laravel the controller functions would look something like this:
 
@@ -175,8 +174,6 @@ App::bind('BasecampOAuthProvider', function($app) {
 
 Now we just need to get the access token from the current session with ``Session::get('accessToken')`` and append it to the API calls.
 
-To get the client Id and secret and start building your own app you need register [here!](https://integrate.37signals.com/)
+To get the client Id and secret and start building your own app you need to register [here!](https://integrate.37signals.com/)
 
-If you want to do OAuth authentification using services from Google, Facebook or some of the other providers already included in the league/oauth2-client library, you can just skip the fist step and use the library provider when implementing the controller code.
-
-Leave a comment if you found this useful or have any suggestions on how to improve this post.
+If you want to do OAuth authentification using services from Google, Facebook, or some of the other providers already included in the league/oauth2-client library, you can just skip the first step and use the library provider when implementing the controller code.

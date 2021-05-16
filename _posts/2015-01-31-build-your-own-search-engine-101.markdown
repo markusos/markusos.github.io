@@ -3,7 +3,6 @@ layout: post
 title:  "Build your own Search Engine 101"
 date:   2015-01-31 12:00:00
 categories: projects
-comments: true
 ---
 
 For many of us, there is something magical with a search engine. You type in a few well selected words and out comes, hopefully, exactly what we are looking for. So how does it work? In this post I'll go through some of the basic building blocks needed for a basic search engine.

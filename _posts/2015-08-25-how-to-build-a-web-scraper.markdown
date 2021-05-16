@@ -3,16 +3,15 @@ layout: post
 title:  "How to build a Web scraper with DOM parsing in 10 minutes"
 date:   2015-08-25 22:30:00
 categories: projects
-comments: true
 ---
 
-API:s are a developers best friends when accessing remote data, but great API:s does not grow on trees. So what do you do when the data you need isn't accessible through a well designed API, or no API at all for that matter? As long as the data is accessible through your Web browser, you can always just scrape it yourself! In this post I'll go through how to build a simple Web scraper in 10 min using Guzzle and PHP's DOM parser. I'll also give a brief introduction to XPaths.
+API:s are a developer's best friends when accessing remote data, but great API:s does not grow on trees. So what do you do when the data you need isn't accessible through a well-designed API, or no API at all for that matter? As long as the data is accessible through your Web browser, you can always just scrape it yourself! In this post, I'll go through how to build a simple Web scraper in 10 min using Guzzle and PHP's DOM parser. I'll also give a brief introduction to XPaths.
 
 > Web scraping is the art of fetching and parsing a Web document to extract information.
 
-When scraping a Web site we first need to request the page and receive the page HTML DOM tree. There are a bunch of tools that could be used for this. One of the more well known tools is [cURL](http://php.net/manual/en/book.curl.php), a library and command-line tool that can be used to transfer data using a wide range of protocols, including http.
+When scraping a Web site we first need to request the page and receive the page HTML DOM tree. There are a bunch of tools that could be used for this. One of the more well-known tools is [cURL](http://php.net/manual/en/book.curl.php), a library and command-line tool that can be used to transfer data using a wide range of protocols, including HTTP.
 
-After we have received the HTML DOM from the Web server it is time to parse the DOM tree to extract the information we want. The most naive way is to do this with string operations and regular expressions. This is usually very time consuming for more complex HTML documents and it usually doesn't work too well if the HTML DOM changes slightly. A more robust solution is to use a DOM parser library with either CSS selectors or XPath's to query the DOM for the DOM elements that contains the information we want to extract. PHP has a decent built in DOM parser in one of the languages [default extention](http://php.net/manual/en/book.dom.php).
+After we have received the HTML DOM from the Web server it is time to parse the DOM tree to extract the information we want. The most naive way is to do this with string operations and regular expressions. This is usually very time-consuming for more complex HTML documents and it usually doesn't work too well if the HTML DOM changes slightly. A more robust solution is to use a DOM parser library with either CSS selectors or XPath's to query the DOM for the DOM elements that contain the information we want to extract. PHP has a decent built-in DOM parser in one of the languages [default extention](http://php.net/manual/en/book.dom.php).
 
 In the basic scrape class below I use the [Guzzle](http://guzzle.readthedocs.org/) PHP library to request and receive the site HTML DOM. Then I use PHP's DOM parser library to parse the DOM tree for the nodes containing information. 
 
@@ -133,7 +132,7 @@ $x('//b[@id="test"]');
 
 When you hit enter is should return <b id='test' data-hello='Cool right? You have just written your first XPath!'>this element</b>.
 
-So how does it work? The first part, `//` tells the parser to start at the root of the document. `b` filters it down to all \<b\> tags on the page. The brackets `[]` right next to the `b` tells the parser to match attributes on the `b` elements. `@id="test"` is used to only match the node where the attribute id equals "test". Let's look at some more examples of how we can select the same node, If you want you can look at the DOM and try to figure out how it works:
+So how does it work? The first part, `//` tells the parser to start at the root of the document. `b` filters it down to all \<b\> tags on the page. The brackets `[]` right next to the `b` tell the parser to match attributes on the `b` elements. `@id="test"` is used to only match the node where the attribute id equals "test". Let's look at some more examples of how we can select the same node, If you want you can look at the DOM and try to figure out how it works:
 
 {% highlight php %}
 
@@ -148,7 +147,7 @@ $x('//*[@id="test"]');
 
 ## Putting it all together
 
-Now lets use the scraper class and our knowledge about XPaths to scrape the root page of this site:
+Now let's use the scraper class and our knowledge about XPaths to scrape the root page of this site:
 
 {% highlight php %}
 <?php
