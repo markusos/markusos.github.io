@@ -13,4 +13,5 @@ paginate_path: "/page/:num/"
 
 # Build settings
 markdown: kramdown
-gems: [jekyll-paginate]
+plugins: 
+  - jekyll-paginate
