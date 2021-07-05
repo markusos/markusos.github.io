@@ -14,7 +14,7 @@ permalink: /about/
 
 ## About Me
 
-Detail-oriented full-stack software engineer with 7+ years experience in building high-volume data systems. Lead engineer on CipherHealth's data team, focusing on driving patient engagement and better clinical outcomes through data.
+Detail-oriented full-stack software engineer with 8+ years experience in building high-volume data systems. Lead engineer on CipherHealth's data team, focusing on driving patient engagement and better clinical outcomes through data.
 
 ### Education
 
