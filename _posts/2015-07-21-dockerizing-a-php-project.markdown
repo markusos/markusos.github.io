@@ -19,7 +19,7 @@ There are many great tutorials out there, so I'm not going to dive too deeply in
 
 Since Docker does not run natively on Mac you need to run it inside a Virtual Machine. Boot2Docker is a lightweight VM custom-built for running Docker. If you have used Vagrant before, you'll feel right at home. Follow the installation guide in Dockers documentation for Mac and you should be ready in no time. If you already have [VirtualBox](https://www.virtualbox.org/) and my favorite package manager for Mac, [Brew](http://brew.sh/), installed; all you need to do is to run:
 
-{% highlight php %}
+{% highlight bash %}
 
 $ brew install docker
 $ brew install boot2docker
@@ -30,7 +30,7 @@ $ boot2docker up
 
 The next step is to install Docker-Compose. It is another great tool, used to defines multi-container applications. It basically keeps track of how to initialize and run applications that need several docker containers that are linked together. You can read more here: [docs.docker.com/compose/](https://docs.docker.com/compose/)
 
-{% highlight php %}
+{% highlight bash %}
 
 $ brew install docker-compose
 
@@ -40,7 +40,7 @@ $ brew install docker-compose
 
 Let's start by looking at a simple Dockerfile, the basic configuration that docker uses to build a container:
 
-{% highlight php %}
+{% highlight bash %}
 
 FROM ubuntu:latest
 
@@ -68,7 +68,7 @@ If you want you can run build and run the container by itself, but we are going 
 
 To use Docker-Compose we first need to define a docker-compose.yml configuration file:
 
-{% highlight php %}
+{% highlight yaml %}
 
 web:
   build: .
@@ -137,7 +137,7 @@ The first one, web, is the Dockerfile we defined before. The following three ser
 
 We are now ready to build and start the containers and run the application.
 
-{% highlight php %}
+{% highlight bash %}
 
 $ docker-compose build
 $ docker-compose up
@@ -148,7 +148,7 @@ The containers should now be running in your docker container host and should be
 
 Below follows some good to know commands when getting started with Docker.
 
-{% highlight php %}
+{% highlight bash %}
 
 # SSH into the boot2docker VM
 $ boot2docker ssh

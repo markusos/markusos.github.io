@@ -67,7 +67,9 @@ Inverse document frequency (IDF) is used to weigh the terms importance in the wh
 
 By multiplying the term frequency with the inverse document frequency, we get the TF-IDF metric.
 
-$$TF-IDF(t, d, C) = \frac{frequency(t,d)}{length(d)} * log_e\left(\frac{size(C)}{count(t, C)}\right)$$
+$$
+TF-IDF(t, d, C) = \frac{frequency(t,d)}{length(d)} * log_e\left(\frac{size(C)}{count(t, C)}\right)
+$$
 
 ### Cosine similarity
 
@@ -75,13 +77,19 @@ If we want to allow your search queries to contain more than one word, we need s
 
 To rank the documents, the search engine calculates the cosine similarity between the given query and all the found documents.
 
-$$ Similarity(d, q) = \frac{d \centerdot q}{\|d\| \|q\| }$$
+$$
+Similarity(d, q) = \frac{d \centerdot q}{\|d\| \|q\| }
+$$
 
 The weights used to calculate the dot product between a document d and the query q is the TF-IDF scores for each token in the query, calculated both on the query and for the document.
 
-$$d \centerdot d = d[0] q[0] + d[1] q[1] + ... + d[n] q[n]$$
+$$
+d \centerdot d = d[0] q[0] + d[1] q[1] + ... + d[n] q[n]
+$$
 
-$$\|d\| = \sqrt{d[0]^2 + d[1]^2 + ... + d[n]^2}$$
+$$
+\|d\| = \sqrt{d[0]^2 + d[1]^2 + ... + d[n]^2}
+$$
 
 Where d[0] and q[0] is the TF-IDF score of the first token in the query for the document and the query respectively.
 

@@ -27,7 +27,7 @@ The PECL Stem package supports the following languages through these functions:
 
 To install, run:
 
-{% highlight php %}
+{% highlight bash %}
 $ pecl install stem
 {% endhighlight %}
 
@@ -42,7 +42,7 @@ extension="stem.so"
 Remember to reload apache, or whatever webserver you are using.
 
 To check that if the extension has been correctly loaded by PHP, run:
-{% highlight php %}
+{% highlight bash %}
 $ php -i | grep 'stem support'
 {% endhighlight %}
 

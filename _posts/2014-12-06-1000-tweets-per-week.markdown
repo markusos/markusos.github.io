@@ -14,24 +14,24 @@ Let's use the Laravel framework and tools to quickly build something that works.
 
 Use Composer to add the dependencies for the Beanstalkd PHP library:
 
-{% highlight php %}
+{% highlight bash %}
 $ composer require pda/pheanstalk
 {% endhighlight %}
 
 To send the tweets I used the library [twitter-api-php](https://github.com/J7mbo/twitter-api-php). Lets use Composer to add that to our dependencies too:
 
-{% highlight php %}
+{% highlight bash %}
 $ composer require j7mbo/twitter-api-php
 {% endhighlight %}
 
 The Composer.json file should now contain something like this:
 
-{% highlight php %}
+{% highlight json %}
 "require": {
 	"laravel/framework": "4.2.*",
 	"pda/pheanstalk": "~2.0",
 	"j7mbo/twitter-api-php": "dev-master"
-  },
+}
 {% endhighlight %}
 
 Run `composer install` or `composer update` to make sure that everything is installed as it should.
@@ -90,7 +90,7 @@ Queue::later($date, 'QueueTweet@tweet',
 
 The only thing left to do now is to start Beanstalkd and a listener for the queue. We use Laravel's artisan command to start the queue listener.
 
-{% highlight php %}
+{% highlight bash %}
 $ beanstalkd
 $ php artisan queue:listen
 {% endhighlight %}
@@ -99,7 +99,7 @@ If everything works out as it should, you should see the tweets showing up on Tw
 
 If you run into problems and want to inspect Beanstalkd's queue you can use telnet to connect to the service and display stats for the different queues.
 
-{% highlight php %}
+{% highlight bash %}
 $ telnet localhost 11300
 $ stats			# show Beanstalkd status
 $ peek-delayed 		# show the next delayed job

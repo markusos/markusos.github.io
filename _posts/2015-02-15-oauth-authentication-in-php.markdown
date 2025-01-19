@@ -10,7 +10,7 @@ Setting up OAuth doesn't have to be a pain. There are tons of well-written and d
 
 The first thing we need to do is to download the OAuth library that we want to use. In this post, I'm gonna use the [league/oauth2-client](https://github.com/thephpleague/oauth2-client) which is a well-tested PHP library for OAuth2 authentication. We do this by using composer.
 
-{% highlight php %}
+{% highlight bash %}
 
 $ composer require league/oauth2-client
 $ composer update

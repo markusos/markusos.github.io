@@ -7,21 +7,21 @@ categories: projects
 
 I recently challenged myself to start learning CasperJS, a scripting tool that is using the PhantomJS WebKit headless browser to navigate the web. For one of my first projects, I decided to build a site map generation script. Since I was already familiar with the Graphviz tools I decided to use the Graphviz sfdp command-line tool to generate visual site maps. This post is a short introduction to the tool, and how to use it.
 
-> CasperJS is an open-source navigation scripting & testing utility written in Javascript for the PhantomJS WebKit headless browser and SlimerJS (Gecko). It eases the process of defining a full navigation scenario and provides useful high-level functions, methods & syntactic sugar. - [casperjs.org](http://casperjs.org/)
+> CasperJS is an open-source navigation scripting & testing utility written in Javascript for the PhantomJS WebKit headless browser and SlimerJS (Gecko). It eases the process of defining a full navigation scenario and provides useful high-level functions, methods & syntactic sugar. - [casperjs](https://github.com/casperjs/casperjs)
 
 The site mapper tool is available on [Github](https://github.com/markusos/site-mapper).
 
 ### How to use:
 
-Install CasperJS, for more instructions see here: [docs.casperjs.org](http://docs.casperjs.org/en/latest/installation.html)
+Install CasperJS, for more instructions see here: [docs.casperjs.org](https://github.com/casperjs/casperjs)
 
-{% highlight php %}
+{% highlight bash %}
 $ brew install casperjs --devel
 {% endhighlight %}
 
 Run the scrip to crawl your website, in this case this site "http://markusos.github.io/:
 
-{% highlight php %}
+{% highlight bash %}
 $ casperjs sitemap.js http://markusos.github.io/ > map.dot
 {% endhighlight %}
 
@@ -29,13 +29,13 @@ This scrapes the provided site by following all publicly accessible internal lin
 
 If you want to generate a visual site map graph from the DOT file output, you need to have Graphviz installed. Use Brew to install it, or if you don't have a Mac with Brew get it from here: [www.graphviz.org](http://www.graphviz.org/Download.php)
 
-{% highlight php %}
+{% highlight bash %}
 $ brew install graphviz --with-gts
 {% endhighlight %}
 
 Run Graphviz on the site map DOT file with this command:
 
-{% highlight php %}
+{% highlight bash %}
 $ sfdp -Tsvg map.dot -o sitemap.svg
 {% endhighlight %}
 

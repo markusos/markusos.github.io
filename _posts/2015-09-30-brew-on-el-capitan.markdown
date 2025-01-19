@@ -22,7 +22,7 @@ This is probably caused by the OS X update process resetting the folder owner of
 
 The next step is to run `brew upgrade` to upgrade all installed packages to the last version. Here you might run into a couple of different errors; I ran into this error, among a few others:
 
-{% highlight php %}
+{% highlight bash %}
 $ brew upgrade
 ...
 configure: error: C compiler cannot create executables
