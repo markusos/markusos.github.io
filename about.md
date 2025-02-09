@@ -5,7 +5,9 @@ permalink: /about/
 ---
 
 <div class="jumbotron">
-    <img src="{{site.url}}/assets/me.jpeg" alt="Markus Östberg" class="profile-image">
+    <div class="profile-image">
+      <img src="{{site.url}}/assets/me.jpeg" alt="Markus Östberg" />
+    </div>
     <h1>Markus Östberg</h1>
     <h2>Software Engineer</h2>
     <div class="social">

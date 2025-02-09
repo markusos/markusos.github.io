@@ -283,13 +283,24 @@
   text-align: center;
 
   .profile-image {
+    display: inline-block;
     border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -khtml-border-radius: 50%;
     margin: 0 auto;
-    display: block;
+    margin-bottom: $spacing-unit / 2;
     width: 260px;
     height: 260px;
-    margin-bottom: $spacing-unit / 2;
+
+    img  {
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -khtml-border-radius: 50%;
+      vertical-align: middle;
   }
+}
 
   h1 {
     font-size: 42px;
