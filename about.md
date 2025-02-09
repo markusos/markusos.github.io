@@ -5,9 +5,10 @@ permalink: /about/
 ---
 
 <div class="jumbotron">
+    <img src="{{site.url}}/assets/me.jpeg" alt="Markus Östberg" class="profile-image">
     <h1>Markus Östberg</h1>
     <h2>Software Engineer</h2>
-    <div class="row">
+    <div class="social">
       <a href="http://www.linkedin.com/in/markusos">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon" aria-hidden="true" focusable="false" viewBox="0 0 448 512">
           <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
@@ -16,7 +17,7 @@ permalink: /about/
         <span>LinkedIn</span>
       </a>
     </div>
-    <div class="row">
+    <div class="social">
       <a href="https://github.com/markusos">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon" aria-hidden="true" focusable="false" viewBox="0 0 496 512">
           <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
@@ -29,9 +30,9 @@ permalink: /about/
 
 ## About Me
 
-Experienced Data Engineer, with over 10 years under my belt, passionate about crafting and maintaining high-volume data systems that drive business insights. Currently serving as a Principal Data Engineer at CipherHealth, where I'm collaborating on designing and implementing complex data pipelines. I'm always looking for ways to optimize performance through AI integrations, and enjoy mentoring engineers to deliver impactful solutions together.
+Data Engineer with over 10 years of experience, passionate about crafting and maintaining high-volume data systems that drive business insights. Currently, I am the Principal Data Engineer at CipherHealth, where I collaborate on designing and implementing complex data pipelines. I am always looking for ways to optimize performance, integrate AI into our solutions, and enjoy mentoring engineers to deliver impactful solutions together.
 
-Proficient in a broad spectrum of technologies, including Python, SQL (PostgreSQL, Snowflake), MongoDB, Ruby on Rails, JavaScript, Apache Airflow, MongoDB, Snowflake, dbt (Data Build Tool), and Terraform. I believe in learning from others and continually improving my skills to better serve our team's goals.
+I am proficient in a broad spectrum of technologies, including Python, SQL, MongoDB, Ruby, JavaScript, Apache Airflow, dbt, PostgreSQL, Snowflake and Terraform. I believe in learning from others and continually improving my skills to better serve our team's goals.
 
 ### Education
 

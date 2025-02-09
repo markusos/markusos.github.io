@@ -282,6 +282,15 @@
   background-color: $bg-color-dark;
   text-align: center;
 
+  .profile-image {
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    width: 260px;
+    height: 260px;
+    margin-bottom: $spacing-unit / 2;
+  }
+
   h1 {
     font-size: 42px;
     margin-bottom: 0;
@@ -292,8 +301,9 @@
     margin-bottom: 9px;
   }
 
-  .row {
-    margin-bottom: 0;
+  .social {
+    display: inline-block;
+    padding-right: 5px;
   }
 }
 
