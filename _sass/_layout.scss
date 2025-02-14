@@ -345,3 +345,47 @@
   color: $background-color;
   border-color: $button-color;
 }
+
+#search {
+  margin: 20px 0;
+
+  #search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  #search-results {
+    margin-top: 20px;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid $grey-color-dark;
+      border-radius: 6px;
+      background-color: $bg-color-dark;
+
+      a {
+        font-size: $base-font-size;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      p {
+        margin: 5px 0 0;
+        font-size: $small-font-size;
+      }
+    }
+  }
+}

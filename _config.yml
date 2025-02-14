@@ -17,3 +17,4 @@ kramdown:
 plugins: 
   - jekyll-paginate
   - jekyll-sitemap
+  
