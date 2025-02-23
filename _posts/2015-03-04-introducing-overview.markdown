@@ -19,6 +19,6 @@ The interface is simple and clean; it is designed to make it easy for project ma
 
 OverView makes it possible to efficiently see upcoming deadlines and makes it easy to follow up on a project’s progress. Under each team member, tasks can be sorted by project name or by date. Here at Engage, our project manager uses the sort-by-date feature every day to ensure that project deadlines are met and tasks are complete on time or ahead of schedule.
 
-OverView is now available as open-source software, so go ahead and check it out. We’re more than happy to accept pull requests and issue tickets. If you have a Basecamp account you can also try it out for yourself here: [overview.engage-apps.com](http://overview.engage-apps.com/) or view the project on GitHub: [EngageDC/overview](https://github.com/EngageDC/overview).
+OverView is now available as open-source software, so go ahead and check it out. We’re more than happy to accept pull requests and issue tickets. If you have a Basecamp account you can also try it out for yourself here: [overview.engage-apps.com](http://overview.engage-apps.com/) or view the project on GitHub: [EngageDC/overview](https://github.com/markusos/overview).
 
 [[This is a repost of a blog post I wrote for the Engage Blog](http://enga.ge/development/introducing-overview-for-basecamp/)]

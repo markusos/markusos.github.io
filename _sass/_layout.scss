@@ -282,6 +282,20 @@
   background-color: $bg-color-dark;
   text-align: center;
 
+  .not-found-image {
+    display: inline-block;
+    margin: 0 auto;
+    width: 260px;
+  }
+
+  ul.nav {
+    list-style-type: none;
+    li {
+      display: inline;
+      margin-right: 10px;
+    }
+  }
+
   .profile-image {
     display: inline-block;
     border-radius: 50%;

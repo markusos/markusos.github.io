@@ -7,6 +7,8 @@ categories: projects
 
 Snowflake is implementing an important security enhancement by phasing out the use of usernames and passwords for authentication in November 2025. This change necessitates a transition to a more secure authentication method known as Key-Pair Authentication. This change was announced on the [Snowflake Blog](https://www.snowflake.com/en/blog/blocking-single-factor-password-authentification/) and is part of Snowflake's ongoing commitment to enhancing security and protecting sensitive data.
 
+![Snowflake]({{site.url}}/assets/snowflake_security.png){: .center-image }
+
 ### Understanding the Transition
 
 Traditional password-based authentication, while convenient, presents inherent security vulnerabilities. Key-Pair Authentication addresses these concerns by employing a more robust security model.
