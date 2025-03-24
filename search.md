@@ -2,6 +2,7 @@
 layout: default
 title: Search
 permalink: /search/
+show_in_menu: false
 ---
 
 <div id="search" data-baseurl="{{ site.baseurl }}">

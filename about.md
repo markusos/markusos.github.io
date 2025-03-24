@@ -2,6 +2,7 @@
 layout: about
 title: About
 permalink: /about/
+show_in_menu: true
 ---
 
 <div class="jumbotron">
