@@ -26,4 +26,8 @@
       "url": "{{ site.url }}"
     }
   </script>
+  <!-- Fix for iOS Safari drowdown menu close on click outside the menu -->
+  <script>
+    document.addEventListener('touchstart', function() {});
+  </script>
 </head>

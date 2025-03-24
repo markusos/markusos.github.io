@@ -81,6 +81,7 @@ body {
         position: relative;
 
         &:hover .menu-links-wrapper,
+        &:active .menu-links-wrapper,
         .menu-links-wrapper:hover {
           visibility: visible;
           height: auto;
