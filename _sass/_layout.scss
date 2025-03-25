@@ -81,7 +81,15 @@ body {
         position: relative;
 
         &:hover .menu-links-wrapper,
+        &:focus .menu-links-wrapper,
         &:active .menu-links-wrapper,
+        .menu-links-wrapper:focus-within {
+          visibility: visible;
+          height: auto;
+          width: auto;
+          opacity: 1;
+          transition: all 0.2s ease-in-out;
+        }
         .menu-links-wrapper:hover {
           visibility: visible;
           height: auto;
