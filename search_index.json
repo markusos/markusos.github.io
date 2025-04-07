@@ -8,8 +8,14 @@ layout: null
   {% for page in site.posts %}
     {
       "title": "{{ page.title | escape }}",
+      "date": "{{ page.date | date: '%b %-d, %Y' }}",
+      "tags": [
+        {%- for tag in page.tags %}
+          "{{ tag | escape }}"{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ],
       "keywords": {
-        {%- assign sanitized_content = page.content | append: ' ' | append: page.title | strip_html | downcase | escape %} 
+        {%- assign sanitized_content = page.content | append: ' ' | append: page.title | append: page.tags | join: " " | strip_html | downcase | escape %}
         {%- for char in split_chars %}
             {%- assign sanitized_content = sanitized_content | replace: char, ' ' %}
         {%- endfor %}
@@ -20,7 +26,11 @@ layout: null
         {%- assign stop_words_filtered_words = '' %}
         {%- for word in filtered_words %}
             {%- unless stop_words contains word %}
-                {%- assign stop_words_filtered_words = stop_words_filtered_words | append: ',' | append: word %}
+                {%- if stop_words_filtered_words == '' %}
+                    {%- assign stop_words_filtered_words = word %}
+                {%- else %}
+                    {%- assign stop_words_filtered_words = stop_words_filtered_words | append: ',' | append: word %}
+                {%- endif %}
             {%- endunless %}
         {%- endfor %}
 

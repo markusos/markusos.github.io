@@ -3,6 +3,10 @@ layout: post
 title:  "Create a site map using CasperJS and Graphviz"
 date:   2016-01-07 22:30:00
 categories: projects
+tags:
+    - Dev
+    - JavaScript
+    - Web
 ---
 
 I recently challenged myself to start learning CasperJS, a scripting tool that is using the PhantomJS WebKit headless browser to navigate the web. For one of my first projects, I decided to build a site map generation script. Since I was already familiar with the Graphviz tools I decided to use the Graphviz sfdp command-line tool to generate visual site maps. This post is a short introduction to the tool, and how to use it.

@@ -3,6 +3,9 @@ layout: post
 title:  "PHP[World]"
 date:   2014-12-05 23:00:00
 categories: engage
+tags:
+    - PHP
+    - Work
 ---
 
 My second week at Engage I was invited to join the rest of Engage's developers at the [PHP[World]](http://world.phparch.com/) conference here in DC. The conference was great, with many interesting and inspiring talks. One of my most memorable experiences from the conference was the dinner with the creator of the Laravel framework, Taylor Otwell, and the Capital Laravel Meetup group.

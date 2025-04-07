@@ -3,6 +3,10 @@ layout: post
 title:  "Automatically solve Kuku-Kube with JavaScript"
 date:   2015-04-10 23:59:00
 categories: engage
+tags:
+    - Dev
+    - JavaScript
+    - Web
 ---
 
 Yesterday during my lunch break one of my co-workers introduced me, and the other developers at Engage, to the color puzzle game [Kuku-Kube](http://www.kuku-kube.com/). The goal of the game is to as quickly as possible identify and click on a uniquely colored square in a grid of squares. The game has been featured on a number of big sites during the last day, including [Reddit](http://www.reddit.com/r/InternetIsBeautiful/comments/31xz0w/test_your_color_perception/) and [Business Insider](http://www.businessinsider.com/what-is-kukukube-2015-4). This post is about how I build an automatic solver in JavaScript over a lunch break.

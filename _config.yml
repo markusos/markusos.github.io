@@ -17,3 +17,16 @@ kramdown:
 plugins: 
   - jekyll-paginate
   - jekyll-sitemap
+
+collections:
+  post_tags:
+    permalink: /tags/:name/
+    output: true
+
+defaults:
+  - scope:
+      path: ''
+      type: post_tags
+    values:
+      permalink: "/tags/:name/"
+      layout: tag

@@ -3,6 +3,11 @@ layout: post
 title:  "Dockerizing a PHP project - A short introduction"
 date:   2015-07-21 22:30:00
 categories: projects
+tags:
+    - Dev
+    - Docker
+    - PHP
+    - Web
 ---
 
 After using Vagrant and VirtualBox at Engage for several months I finally stumbled over a project at work where I got the opportunity to learn and use Docker. Inspired by my newly acquired knowledge I wanted to experiment more with Docker so I decided to "Dockerize" my latest side project.

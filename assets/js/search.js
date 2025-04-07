@@ -14,13 +14,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 queryTerms.forEach(term => {
                     const termFrequency = Object.keys(item.keywords).reduce((acc, keyword) => {
-                        if (keyword.includes(term)) {
+                        if (keyword.startsWith(term)) {
                             acc += item.keywords[keyword];
                         }
                         return acc;
                     }, 0);
                     
-                    const inverseDocumentFrequency = Math.log(searchIndex.length / searchIndex.filter(i => Object.keys(i.keywords).some(keyword => keyword.includes(term))).length);
+                    const inverseDocumentFrequency = Math.log(searchIndex.length / searchIndex.filter(i => Object.keys(i.keywords).some(keyword => keyword.startsWith(term))).length);
                     score += termFrequency * inverseDocumentFrequency;
                 });
 
@@ -57,11 +57,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 const ul = document.createElement('ul');
                 results.forEach(item => {
                     const li = document.createElement('li');
+
+                    // Post metadata
+                    const span = document.createElement('span');
+                    span.textContent = `${item.date} • ${item.tags.map(element => '#' + element).join(' ')}`;
+                    li.appendChild(span);
+
+                    // Post title
                     const a = document.createElement('a');
                     a.href = item.url;
                     a.textContent = item.title;
                     li.appendChild(a);
 
+                    // Post excerpt
                     const p = document.createElement('p');
                     p.textContent = item.excerpt;
                     li.appendChild(p);

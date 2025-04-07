@@ -3,6 +3,10 @@ layout: post
 title:  "OAuth authentication in PHP"
 date:   2015-02-17 17:00:00
 categories: projects
+tags:
+    - Dev
+    - PHP
+    - Web
 ---
 
 Setting up OAuth doesn't have to be a pain. There are tons of well-written and documented libraries for OAuth out there that are easy to use. If you want to authenticate against one of the larger sites on the web, like Facebook and Google, chances are that you don't have to do much more than installing the library and setting up some routs for the auth callback. In this post, I'm going to walk through a slightly more complex scenario, where we are gonna authenticate against [Basecamps](http://basecamp.com) API.

@@ -3,6 +3,10 @@ layout: post
 title:  "Exploring AI coding tools"
 date:   2025-01-20 23:00:00
 categories: projects
+tags:
+    - AI
+    - Dev
+    - Python
 ---
 
 In recent years, AI coding tools for software engineers have rapidly improved. Tools like GitHub Copilot, which has been around for over three years, are becoming an integral part of many developers' workflows. However, the question remains: Do these tools really provide value? While I’ve seen the rise of these technologies, it wasn’t until last year that I had the opportunity to use them in my day-to-day work. After experimenting with Google's Gemini coding assistant at work, I decided to explore and compare a few different AI tools in my own time.

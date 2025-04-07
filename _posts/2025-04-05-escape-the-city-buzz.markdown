@@ -3,13 +3,16 @@ layout: post
 title:  "Escape the City Buzz: A Cozy Catskills Getaway"
 date:   2025-04-05 19:00:00
 categories: travel
+tags:
+    - Life
+    - Travel
 ---
 
-Feeling the relentless pace of city life? That craving for fresh air, quiet woods, and a sky full of stars – perhaps without sacrificing a comfy bed and modern conveniences – is something we know well. We recently chased that feeling with a weekend escape to Postcard Cabins Eastern Catskills, and it turned out to be the perfect antidote to the urban grind.
+Feeling the relentless pace of city life? That craving for fresh air, quiet woods, and a sky full of stars – perhaps without sacrificing a comfy bed and modern conveniences – is something we know well. We recently chased that feeling with a weekend escape to [Postcard Cabins Eastern Catskills](https://postcardcabins.com/eastern-catskills/), and it turned out to be the perfect antidote to the urban grind.
 
 ### Day One: Trading Concrete Jungles for Woodland Whispers
 
-Leaving the familiar chaos of New York City behind, we pointed our car north towards the Catskills. The roughly 2.5-hour drive to 282 Cairo Junction Rd, Catskill, NY, felt like shedding layers of city stress with every mile. Its proximity makes it an incredibly accessible retreat for a quick nature fix. Before fully settling into our woodland haven, a quick 7-minute zip to the nearby Hannaford had our groceries sorted for the weekend.
+Leaving the familiar chaos of New York City behind, we pointed our car north towards the Catskills. The roughly 2.5-hour drive to Catskill felt like shedding layers of city stress with every mile. Its proximity makes it an incredibly accessible retreat for a quick nature fix. Before fully settling into our woodland haven, a quick 7-minute zip to the nearby Hannaford had our groceries sorted for the weekend.
 
 [![Postcard Cabins]({{site.url}}/assets/cabin.jpeg){: .center-image }]({{site.url}}/assets/cabin.jpeg)
 
@@ -19,23 +22,23 @@ With supplies gathered, our first evening unfolded exactly as hoped: simple, pea
 
 Day two was all about embracing the stillness we came for. We let the morning unfurl slowly within our cozy cabin – a space genuinely designed for recharging. Sunlight streamed through the large window, offering front-row seats to the local wildlife theatre. We watched birds flit between branches and squirrels scamper playfully, a simple, grounding connection to nature enjoyed over morning coffee, right from our bed.
 
-Later, adventure beckoned. A scenic 28-minute drive brought us to the legendary Kaaterskill Falls. Setting off from Laurel House Road, we tackled the 1.7-mile out-and-back trail. It's generally considered moderately challenging; while well-maintained steps have been added recently, expect some steep and rocky sections (good footwear is recommended!). The payoff? Absolutely breathtaking views of the 260-foot Kaaterskill Falls, New York's highest cascading waterfall. The sheer scale and the roar of the water were invigorating.
+Later, adventure beckoned. A scenic 28-minute drive brought us to the legendary [Kaaterskill Falls](https://www.alltrails.com/trail/us/new-york/katterskill-falls-from-laurel-house-road). Setting off from Laurel House Road, we tackled the 1.7-mile out-and-back trail. It's generally considered moderately challenging; while well-maintained steps have been added recently, expect some steep and rocky sections (good footwear is recommended!). The payoff? Absolutely breathtaking views of the 260-foot Kaaterskill Falls, New York's highest cascading waterfall. The sheer scale and the roar of the water were invigorating.
 
 
 [![Kaaterskill Falls]({{site.url}}/assets/kaaterskill_falls.jpeg){: .center-image }]({{site.url}}/assets/kaaterskill_falls.jpeg)
 
 
-For dinner, we ventured to Casa Susanna in nearby Leeds (part of Camptown lodging), drawn by its reputation for modern Mexican cuisine inspired by family history and the incredible bounty of the Hudson Valley. Their commitment to local farmers, ranchers, and fishermen felt perfectly aligned with the region's natural spirit, and the meal was fantastic. Back at the cabin, the day wound down with a quintessential campfire activity: melting marshmallows for gooey, delicious s'mores by the fire pit.
+For dinner, we ventured to [Casa Susanna](https://camptowncatskills.com/casa-susanna) in nearby Leeds (part of Camptown lodging), drawn by its reputation for modern Mexican cuisine inspired by family history and the incredible bounty of the Hudson Valley. Their commitment to local farmers, ranchers, and fishermen felt perfectly aligned with the region's natural spirit, and the meal was fantastic. Back at the cabin, the day wound down with a quintessential campfire activity: melting marshmallows for gooey, delicious s'mores by the fire pit.
 
 ### Departure Day: Hudson Charm and Lingering Calm
 
 Our final morning involved packing up – a straightforward process thanks to the cabin's minimalist, "everything you need, nothing you don't" approach. We weren't quite ready to dive back into city life, so we made a detour to the delightful town of Hudson, NY.
 
-For brunch, Le Perche on bustling Warren Street proved to be an excellent choice. We can personally vouch for the incredible Croque Madame and the perfectly zesty Spicy Chicken Sandwich. While they might be known for baked goods, their savory options are definitely worth the stop! Afterwards, a leisurely stroll down Warren Street, popping into unique boutiques and galleries, offered a final, perfect taste of Hudson Valley charm before the drive back to Brooklyn.
+For brunch, [Le Perche](https://www.leperchehudson.com/) on bustling Warren Street proved to be an excellent choice. We can personally vouch for the incredible Croque Madame and the perfectly zesty Spicy Chicken Sandwich. While they might be known for baked goods, their savory options are definitely worth the stop! Afterwards, a leisurely stroll down Warren Street, popping into unique boutiques and galleries, offered a final, perfect taste of Hudson Valley charm before the drive back to Brooklyn.
 
 ### Overall Reflections: The Glamping Experience
 
-Our stay at Postcard Cabins Eastern Catskills delivered a solid dose of "modern glamping." It strikes a great balance, offering comforts like an en-suite bathroom (a huge plus!) and reliable AC/Heat, alongside outdoor essentials like a kitchenette and that lovely fire pit. It’s ideal if you want a nature immersion without fully "roughing it." The cabins are smartly designed, cozy, and make for a comfortable base camp. As some have said, it's a unique experience blending camping vibes with welcome conveniences.
+Our stay at Postcard Cabins Eastern Catskills delivered a solid dose of "modern glamping." It strikes a great balance, offering comforts like an en-suite bathroom (a huge plus!) and reliable AC/Heat, alongside outdoor essentials like a kitchenette and that lovely fire pit. It’s ideal if you want a nature immersion without fully "roughing it." The cabins are smartly designed, cozy, and make for a comfortable base camp.
 
 ### A Few Things to Keep in Mind:
 

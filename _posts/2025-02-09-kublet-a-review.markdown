@@ -3,6 +3,8 @@ layout: post
 title:  "Kublet: A review of a failed Kickstarter promise"
 date:   2025-02-09 19:00:00
 categories: projects
+tags:
+    - Kickstarter
 ---
 
 Remember [Kublet](https://www.kickstarter.com/projects/kublet/kublet)? The tiny, powerful data tracker promising to bring essential information to your fingertips? It launched on Kickstarter in June 2023 with a compelling vision, raising over $150,000 from 800 backers eager to support its development. They envisioned a sleek device displaying everything from stock tickers to weather updates. Sadly, the reality fell far short of the vision, culminating in a project that, for many backers, feels effectively ghosted, leaving those investors with little more than disappointment. And Kublet's story echoes a similar recent situation with another platform, Tidbyt, highlighting a potentially troubling trend in the niche hardware space.

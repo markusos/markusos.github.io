@@ -400,6 +400,47 @@ body {
   border-color: $button-color;
 }
 
+// Tag cloud
+ul.cloud {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  line-height: 2.5rem;
+
+  a[data-weight="1"] { --size: 1; }
+  a[data-weight="2"] { --size: 2; }
+  a[data-weight="3"] { --size: 3; }
+  a[data-weight="4"] { --size: 4; }
+  a[data-weight="5"] { --size: 5; }
+  a[data-weight="6"] { --size: 6; }
+  a[data-weight="7"] { --size: 7; }
+  a[data-weight="8"] { --size: 8; }
+  a[data-weight="9"] { --size: 9; }
+
+  a {
+    color: $blue-color-dark;
+    text-decoration: none;
+    opacity: calc((15 - (9 - var(--size))) / 15); 
+    display: block;
+    font-size: 1.5rem;
+    padding: 0.125rem 0.25rem;
+    text-decoration: none;
+    position: relative;
+
+    --size: 4;
+    font-size: calc(var(--size) * 0.25rem + 0.5rem);
+  }
+
+  a::after {
+    content: " (" attr(data-count) ")";
+    font-size: 1rem;
+  }
+}
+
+// Search
 #search {
   margin: 20px 0;
 
@@ -434,6 +475,12 @@ body {
 
       a:hover {
         text-decoration: underline;
+      }
+
+      span {
+        display: flex;
+        font-size: $small-font-size;
+        color: $blue-color-dark;
       }
 
       p {

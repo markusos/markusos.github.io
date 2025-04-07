@@ -1,0 +1,72 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+show_in_menu: false
+---
+<div class="post">
+
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+    </header>
+
+    <article class="post-content">
+        <ul class="cloud" role="navigation" aria-label="Tag cloud">
+
+            {% assign max_tags_count = 0 %}
+            {% for tag in site.post_tags %}
+                {% assign tag_slug = tag.title | sluggify %}
+                {% assign tag_count = site.tags[tag_slug] | size %}
+                {% if tag_count > max_tags_count %}
+                    {% assign max_tags_count = tag_count %}
+                {% endif %}
+            {% endfor %}
+
+            {% assign max_tags_count = max_tags_count | times: 1.0 %}
+            {% assign all_tag_count = site.tags | size %}
+            {% assign site_post_tags_random = site.post_tags | sample: all_tag_count %}
+
+            {% for tag in site_post_tags_random %}
+                <li>
+                    {% assign tag_slug = tag.title | sluggify %}
+                    {% assign tag_count = site.tags[tag_slug] | size %}
+                    {% assign tag_weight = tag_count | divided_by: max_tags_count %}
+                    {% assign tag_weight = tag_weight | times: 10 %}
+                    {% assign tag_weight = tag_weight | round %}
+
+                    {% if tag_weight == 0 %}
+                        {% assign tag_weight = 1 %}
+                    {% endif %}
+                    
+                    <a href="{{tag.url}}" data-weight="{{tag_weight}}" data-count="{{tag_count}}">{{tag.title}}</a>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <!-- List unknown tags -->
+        {%- assign post_tags = site.post_tags | map: "title" -%}
+        {%- assign unknown_tags_string = '' %}
+        {%- for tag in site.tags -%}
+            {%- if post_tags contains tag[0] -%}
+            {% else %}
+                {%- assign unknown_tags_string = unknown_tags_string | append: ',' | append: tag[0] %}
+            {%- endif -%}
+        {%- endfor -%}
+
+        {%- assign unknown_tags = unknown_tags_string | split: ',' | compact %}
+
+        {% if unknown_tags != empty %}
+            <h2>Unknown Tags</h2>
+            <ul class="tag-list">
+            {%- for tag in unknown_tags -%}
+                {%if tag != empty %}
+                    <li>
+                        {{ tag }} 
+                    </li>
+                {% endif %}
+            {%- endfor -%}
+            </ul>
+        {% endif %}
+    </article>    
+
+</div>

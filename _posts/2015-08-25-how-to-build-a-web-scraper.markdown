@@ -3,6 +3,10 @@ layout: post
 title:  "How to build a Web scraper with DOM parsing in 10 minutes"
 date:   2015-08-25 22:30:00
 categories: projects
+tags:
+    - Dev
+    - PHP
+    - Web
 ---
 
 API:s are a developer's best friends when accessing remote data, but great API:s does not grow on trees. So what do you do when the data you need isn't accessible through a well-designed API, or no API at all for that matter? As long as the data is accessible through your Web browser, you can always just scrape it yourself! In this post, I'll go through how to build a simple Web scraper in 10 min using Guzzle and PHP's DOM parser. I'll also give a brief introduction to XPaths.

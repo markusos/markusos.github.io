@@ -3,6 +3,12 @@ layout: post
 title:  "Adding Search to GitHub Pages Hosted Sites"
 date:   2025-02-16 17:00:00
 categories: projects
+tags:
+    - Dev
+    - Search
+    - Web
+    - Jekyll
+    - JavaScript
 ---
 
 Adding search to a blog hosted on GitHub Pages can present some unique challenges. Because GitHub Pages doesn't support server-side code, traditional server-side search engines are off the table. This means we need to explore alternative approaches, primarily client-side solutions or leveraging third-party search services. In this post, we'll delve into how to implement a basic yet effective client-side search engine using the powerful combination of Jekyll and JavaScript. The implementation will involve pre-processing the blog content during the Jekyll build process to create a search index, enabling fast and efficient searching directly within the user's browser.
@@ -76,7 +82,11 @@ layout: null
         {%- assign stop_words_filtered_words = '' %}
         {%- for word in filtered_words %}
             {%- unless stop_words contains word %}
-                {%- assign stop_words_filtered_words = stop_words_filtered_words | append: ',' | append: word %}
+                {%- if stop_words_filtered_words == '' %}
+                    {%- assign stop_words_filtered_words = word %}
+                {%- else %}
+                    {%- assign stop_words_filtered_words = stop_words_filtered_words | append: ',' | append: word %}
+                {%- endif %}
             {%- endunless %}
         {%- endfor %}
 
@@ -163,13 +173,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 queryTerms.forEach(term => {
                     const termFrequency = Object.keys(item.keywords).reduce((acc, keyword) => {
-                        if (keyword.includes(term)) {
+                        if (keyword.startsWith(term)) {
                             acc += item.keywords[keyword];
                         }
                         return acc;
                     }, 0);
                     
-                    const inverseDocumentFrequency = Math.log(searchIndex.length / searchIndex.filter(i => Object.keys(i.keywords).some(keyword => keyword.includes(term))).length);
+                    const inverseDocumentFrequency = Math.log(searchIndex.length / searchIndex.filter(i => Object.keys(i.keywords).some(keyword => keyword.startsWith(term))).length);
                     score += termFrequency * inverseDocumentFrequency;
                 });
 
@@ -235,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-In order to better support matching of search terms we calculate the TF-IDF score for each document in the search index not by exact match, but with an includes check. This allows for partial matches to be included in the search results and allows the search to return results as soon as the user has typed even a partial word. The search results are then sorted by the TF-IDF score and the top 10 results are displayed to the user.
+In order to better support matching of search terms we calculate the TF-IDF score for each document in the search index not by exact match, but with an `startsWith` check. This allows for partial matches to be included in the search results and allows the search to return results as soon as the user has typed even a partial word. The search results are then sorted by the TF-IDF score and the top 10 results are displayed to the user.
 
 Due to the lack of stemming and other more advanced features the search is not as accurate as a full search engine, but it is good enough for a simple blog. 
 

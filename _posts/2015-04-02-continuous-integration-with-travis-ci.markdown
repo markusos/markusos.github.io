@@ -3,6 +3,10 @@ layout: post
 title:  "Continuous integration with Travis CI"
 date:   2015-04-02 17:00:00
 categories: projects
+tags:
+    - Dev
+    - PHP
+    - Web
 ---
 
 Testing is an important aspect of software development, no matter if you use unit testing or if you run the software and manually test the features. In larger more complex systems, the latter method is usually very time-consuming and prone to miss a lot of bugs. That is why we have tools like unit tests and integration tests. To make our lives easier as developers, but also to make us more self-confident when pushing code changes.
