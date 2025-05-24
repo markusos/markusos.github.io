@@ -27,6 +27,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 return score;
             }
 
+            // Function to decode HTML entities
+            function decodeHtml(html) {
+                return new DOMParser().parseFromString(html, 'text/html').documentElement.textContent;
+            }
+
             // Function to perform the search
             function performSearch(query) {
                 query = query.toLowerCase();
@@ -66,12 +71,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     // Post title
                     const a = document.createElement('a');
                     a.href = item.url;
-                    a.textContent = item.title;
+                    a.textContent = decodeHtml(item.title);
                     li.appendChild(a);
 
                     // Post excerpt
                     const p = document.createElement('p');
-                    p.textContent = item.excerpt;
+                    p.textContent = decodeHtml(item.excerpt);
                     li.appendChild(p);
 
                     ul.appendChild(li);
