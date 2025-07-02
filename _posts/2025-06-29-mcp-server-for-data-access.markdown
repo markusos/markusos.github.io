@@ -9,7 +9,7 @@ tags:
     - Python
 ---
 
-After spending some time with Anthropic's Model Context Protocol (MCP), I'm cautiously optimistic about what might be a fundamental shift in how we interact with data. MCP promises to be the "USB-C port for AI applications": a standardized way for LLMs to access external data and tools. While the protocol itself may seem like yet another abstraction layer, the bigger question is whether we're witnessing the early stages of LLMs becoming the primary interface for data exploration.
+After spending some time with Anthropic's [Model Context Protocol (MCP)](https://modelcontextprotocol.io), I'm cautiously optimistic about what might be a fundamental shift in how we interact with data. MCP promises to be the "USB-C port for AI applications": a standardized way for LLMs to access external data and tools. While the protocol itself may seem like yet another abstraction layer, the bigger question is whether we're witnessing the early stages of LLMs becoming the primary interface for data exploration.
 
 To test this in practice, I built an NYC 311 Data MCP Server that exposes 3.5 million New York City service requests from 2024, enabling LLMs to interact with the data. The server lets AI assistants run read-only SQL queries against the full dataset: complaint types, geographic patterns, temporal trends. It's built on DuckDB for performance and includes some security guardrails to prevent dangerous operations.
 

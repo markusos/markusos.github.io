@@ -38,7 +38,7 @@ show_in_menu: false
                         {% assign tag_weight = 1 %}
                     {% endif %}
                     
-                    <a href="{{tag.url}}" data-weight="{{tag_weight}}" data-count="{{tag_count}}">{{tag.title}}</a>
+                    <a href="{{tag.url}}" data-weight="{{tag_weight}}" data-count="{{tag_count}}">#{{tag.title}}</a>
                 </li>
             {% endfor %}
         </ul>

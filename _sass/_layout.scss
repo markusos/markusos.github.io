@@ -68,7 +68,7 @@ body {
         border-radius: 6px;
         
         &:hover {
-          background-color: $bg-color-dark;
+          background-color: $grey-color-light;
         }
       }
 
@@ -214,6 +214,20 @@ body {
 .post-meta {
   font-size: $small-font-size;
   color: $blue-color-dark;
+
+  .tags a {
+    display: inline-block;
+    padding: 0px 4px;
+    border: 1px solid $grey-color-light;
+    margin-right: 2px;
+    color: $blue-color;
+    text-decoration: none;
+    border-radius: 6px;
+
+    &:hover {
+      background-color: $grey-color-light;
+    }
+  }
 }
 
 .post-link {
@@ -392,12 +406,23 @@ body {
   text-decoration: none;
   border-radius: 6px;
   font-size: $small-font-size;
+
+  &:hover {
+    background-color: $grey-color-light;
+    text-decoration: none;
+  }
 }
 
 .btn-primary {
   background-color: $button-color;
   color: $background-color;
   border-color: $button-color;
+
+  &:hover {
+    background-color: darken($button-color, 10%);
+    color: $background-color;
+    text-decoration: none;
+  }
 }
 
 // Tag cloud
@@ -423,7 +448,7 @@ ul.cloud {
   a {
     color: $blue-color-dark;
     text-decoration: none;
-    opacity: calc((15 - (9 - var(--size))) / 15); 
+    opacity: calc((20 - (9 - var(--size))) / 20); 
     display: block;
     font-size: 1.5rem;
     padding: 0.125rem 0.25rem;

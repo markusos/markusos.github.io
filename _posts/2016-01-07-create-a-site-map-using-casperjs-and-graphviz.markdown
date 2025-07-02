@@ -15,6 +15,16 @@ I recently challenged myself to start learning CasperJS, a scripting tool that i
 
 The site mapper tool is available on [Github](https://github.com/markusos/site-mapper).
 
+<div class="callout">
+    <strong>Update: Jan 19, 2025</strong>
+    <p>
+        The original CasperJS project has been archived, and it is no longer actively maintained. For new projects, consider using alternatives like <a href="https://pptr.dev/">Puppeteer</a>
+    </p>
+    <p>
+        The site-mapper project has been updated to use Puppeteer instead of CasperJS. The new version is available in the old Github repository: <a href="https://github.com/markusos/site-mapper">markusos/site-mapper</a>
+    </p>
+</div>
+
 ### How to use:
 
 Install CasperJS, for more instructions see here: [github.com/casperjs/casperjs](https://github.com/casperjs/casperjs)
@@ -49,8 +59,3 @@ This creates an SVG image of the site map. It could look something like this:
 
 Have any questions or ways to improve the script? Leave a question here below!
 
-> <span><svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg> **Update:**</span>
->
-> The original CasperJS project has been archived, and it is no longer actively maintained. For new projects, consider using alternatives like [Puppeteer](https://pptr.dev/)
->
->The site-mapper project has been updated to use Puppeteer instead of CasperJS. The new version is available in the old Github repository: [markusos/site-mapper](https://github.com/markusos/site-mapper)

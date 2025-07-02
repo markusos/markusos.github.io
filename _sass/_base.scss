@@ -96,11 +96,13 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $blue-color;
+  color: $text-color;
   border-left: 4px solid $blue-color;
-  padding-left: $spacing-unit / 2;
-  font-size: 18px;
-  letter-spacing: -1px;
+  background-color: $bg-color-dark;
+  padding: $spacing-unit;
+  margin: $spacing-unit 0;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
   font-style: italic;
 
   > :last-child {
@@ -116,7 +118,7 @@ code {
   font-size: 15px;
   border: 1px solid $blue-color;
   border-radius: 6px;
-  background-color: #fafaff;
+  background-color: $bg-color-dark;
 }
 
 code {
@@ -172,5 +174,22 @@ td {
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: $blue-color-light;
+}
+
+/**
+ * Callout
+ */
+
+.callout {
+  border-left: 6px solid $brand-color;
+  background-color: $blue-color-light;
+  padding: 1.5em;
+  margin: 1.5em 0;
+  border-radius: 6px;
+
+  strong {
+    color: $brand-color;
+    font-weight: bold;
+  }
 }
