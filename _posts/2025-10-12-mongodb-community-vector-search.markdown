@@ -11,6 +11,8 @@ tags:
 
 I've been itching to try MongoDB's vector search ever since I saw it demoed at MongoDB.local NYC back in September. But here's the thing: until recently, it was Atlas-only. If you wanted to build a RAG application or experiment with semantic search, you either paid for Atlas or jury-rigged something with Pinecone or Weaviate alongside your MongoDB instance. It works, but it always felt like a duct taped solution.
 
+[![MongoDB Search Demo]({{site.url}}/assets/mongodb_vector_search.png){: .center-image }]({{site.url}}/assets/mongodb_vector_search.png)
+
 Then [MongoDB 8.2 Community Edition](https://www.mongodb.com/company/blog/product-release-announcements/supercharge-self-managed-apps-search-vector-search-capabilities) dropped with vector search in public preview, and I immediately spun up a demo project. This isn't just a nice-to-have feature. It fundamentally changes what you can build locally. No more "well, I'd love to test this, but I need to sign up for their cloud service first."
 
 ## What Actually Changed
@@ -24,7 +26,7 @@ Here's what MongoDB added to the free, self-managed Community Edition:
 
 The key part is functional parity with Atlas. Same APIs, same aggregation operators, same everything. You're not getting a watered-down version. This is the real deal, just running on your own hardware.
 
-## The Setup (It's Easier Than You Think)
+## Setup
 
 I built a Wikipedia search demo to test this out properly. The stack is pretty straightforward:
 
