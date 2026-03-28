@@ -391,6 +391,32 @@ body {
     height: auto;
 }
 
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+
+    @include media-query($on-palm) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .app-grid-item {
+        text-align: center;
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        p {
+            margin: 4px 0 0;
+            font-size: $small-font-size;
+            color: $grey-color;
+        }
+    }
+}
+
 .icon {
     width: 1em;
     height: 1em;
