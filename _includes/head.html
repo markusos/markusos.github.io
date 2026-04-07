@@ -1,4 +1,11 @@
 <head>
+  <!-- Apply stored theme before CSS renders to prevent flash -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name=viewport content="width=device-width, initial-scale=1">
@@ -30,4 +37,5 @@
   <script>
     document.addEventListener('touchstart', function() {});
   </script>
+  <script src="{{ "/assets/js/theme.js" | prepend: site.baseurl }}"></script>
 </head>

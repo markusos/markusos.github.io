@@ -3,8 +3,8 @@
  */
 
 body {
-  border-top: 5px solid $blue-color-dark;
-  border-bottom: 1px solid $blue-color-light;
+  border-top: 5px solid var(--blue-color-dark);
+  border-bottom: 1px solid var(--blue-color-light);
 }
 
 .wrapper {
@@ -46,7 +46,7 @@ body {
       line-height: 56px;
       letter-spacing: -1px;
       margin-bottom: 0;
-      color: $blue-color-dark;
+      color: var(--blue-color-dark);
     }
 
     .site-nav {
@@ -64,16 +64,17 @@ body {
         align-items: center;
         line-height: 56px;
         cursor: pointer;
-        border: 1px solid $blue-color-dark;
+        border: 1px solid var(--blue-color-dark);
         border-radius: 6px;
-        
+        background: none;
+
         &:hover {
-          background-color: $grey-color-light;
+          background-color: var(--grey-color-light);
         }
       }
 
       .vl {
-        border-left: 1px solid $blue-color-dark;
+        border-left: 1px solid var(--blue-color-dark);
         height: 28px;
       }
 
@@ -110,14 +111,14 @@ body {
           z-index: 1000;
 
           .menu-links {
-            border: 1px solid $blue-color-dark;
+            border: 1px solid var(--blue-color-dark);
             border-radius: 6px;
-            background-color: #fff;
+            background-color: var(--surface-color);
             padding: $spacing-unit / 2;
             margin: 0;
 
             .page-link {
-              color: $blue-color-dark;
+              color: var(--blue-color-dark);
               line-height: 1.75;
             }
           }
@@ -133,7 +134,7 @@ body {
 
 .site-footer {
   margin-top: auto;
-  border-top: 1px solid $grey-color-light;
+  border-top: 1px solid var(--grey-color-light);
   padding: $spacing-unit 0;
 }
 
@@ -152,7 +153,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   font-size: $small-font-size;
-  color: $blue-color-dark;
+  color: var(--blue-color-dark);
   margin-left: -$spacing-unit / 2;
 }
 
@@ -213,19 +214,19 @@ body {
 
 .post-meta {
   font-size: $small-font-size;
-  color: $blue-color-dark;
+  color: var(--blue-color-dark);
 
   .tags a {
     display: inline-block;
     padding: 0px 4px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid var(--grey-color-light);
     margin-right: 2px;
-    color: $blue-color;
+    color: var(--blue-color);
     text-decoration: none;
     border-radius: 6px;
 
     &:hover {
-      background-color: $grey-color-light;
+      background-color: var(--grey-color-light);
     }
   }
 }
@@ -299,25 +300,25 @@ body {
   a {
     display: block;
     padding: 5px 10px;
-    border: 1px solid $grey-color-light;
-    color: $blue-color;
+    border: 1px solid var(--grey-color-light);
+    color: var(--blue-color);
     text-decoration: none;
     border-radius: 6px;
   }
 
   a:hover {
-    background-color: $grey-color-light;
+    background-color: var(--grey-color-light);
   }
 
   .active a {
-    background-color: $button-color;
-    color: $background-color;
-    border-color: $button-color;
+    background-color: var(--button-color);
+    color: var(--background-color);
+    border-color: var(--button-color);
   }
 
   .disabled a {
     pointer-events: none;
-    background-color: $grey-color-light;
+    background-color: var(--grey-color-light);
   }
 }
 
@@ -326,11 +327,11 @@ body {
 */
 
 .jumbotron {
-  border: 1px solid $blue-color-dark;
+  border: 1px solid var(--blue-color-dark);
   border-radius: 6px;
   padding: $spacing-unit $spacing-unit / 2;
   margin-bottom: $spacing-unit;
-  background-color: $bg-color-dark;
+  background-color: var(--bg-color-dark);
   text-align: center;
 
   .not-found-image {
@@ -421,33 +422,49 @@ body {
     width: 1em;
     height: 1em;
     vertical-align: -0.125em;
-    fill: $blue-color-dark;
+    fill: var(--blue-color-dark);
 }
 
 .btn {
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid $grey-color-light;
-  color: $blue-color;
+  border: 1px solid var(--grey-color-light);
+  color: var(--blue-color);
   text-decoration: none;
   border-radius: 6px;
   font-size: $small-font-size;
 
   &:hover {
-    background-color: $grey-color-light;
+    background-color: var(--grey-color-light);
     text-decoration: none;
   }
 }
 
 .btn-primary {
-  background-color: $button-color;
-  color: $background-color;
-  border-color: $button-color;
+  background-color: var(--button-color);
+  color: var(--background-color);
+  border-color: var(--button-color);
 
   &:hover {
-    background-color: darken($button-color, 10%);
-    color: $background-color;
+    background-color: var(--button-color-hover);
+    color: var(--background-color);
     text-decoration: none;
+  }
+}
+
+// Theme toggle icon visibility
+.theme-icon-light { display: none; }
+.theme-icon-dark  { display: block; }
+
+[data-theme="dark"] {
+  .theme-icon-light { display: block; }
+  .theme-icon-dark  { display: none; }
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    .theme-icon-light { display: block; }
+    .theme-icon-dark  { display: none; }
   }
 }
 
@@ -472,9 +489,9 @@ ul.cloud {
   a[data-weight="9"] { --size: 9; }
 
   a {
-    color: $blue-color-dark;
+    color: var(--blue-color-dark);
     text-decoration: none;
-    opacity: calc((20 - (9 - var(--size))) / 20); 
+    opacity: calc((20 - (9 - var(--size))) / 20);
     display: block;
     font-size: 1.5rem;
     padding: 0.125rem 0.25rem;
@@ -499,8 +516,10 @@ ul.cloud {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--input-border-color);
     border-radius: 6px;
+    background-color: var(--background-color);
+    color: var(--text-color);
   }
 
   #search-results {
@@ -515,9 +534,9 @@ ul.cloud {
     li {
       margin-bottom: 15px;
       padding: 10px;
-      border: 1px solid $grey-color-dark;
+      border: 1px solid var(--grey-color-dark);
       border-radius: 6px;
-      background-color: $bg-color-dark;
+      background-color: var(--bg-color-dark);
 
       a {
         font-size: $base-font-size;
@@ -531,7 +550,7 @@ ul.cloud {
       span {
         display: flex;
         font-size: $small-font-size;
-        color: $blue-color-dark;
+        color: var(--blue-color-dark);
       }
 
       p {

@@ -3,7 +3,7 @@
  */
 
 .highlight {
-    background: $bg-color-dark;
+    background: var(--bg-color-dark);
     @extend %vertical-rhythm;
 
     .c     { color: darken($grey-color, 10%); font-style: italic } // Comment
@@ -13,13 +13,13 @@
     .cp    { color: darken($grey-color, 20%); font-weight: bold } // Comment.Preproc
     .c1    { color: darken($grey-color, 10%); font-style: italic } // Comment.Single
     .cs    { color: darken($grey-color, 20%); font-weight: bold; font-style: italic } // Comment.Special
-    .gd    { color: $text-color; background-color: lighten($background-color, 10%) } // Generic.Deleted
-    .gd .x { color: $text-color; background-color: lighten($background-color, 5%) } // Generic.Deleted.Specific
+    .gd    { color: $text-color; background-color: #ffeef0 } // Generic.Deleted
+    .gd .x { color: $text-color; background-color: #ffdce0 } // Generic.Deleted.Specific
     .ge    { font-style: italic; color: $grey-color } // Generic.Emph
     .gr    { color: #663399 } // Generic.Error
     .gh    { color: darken($grey-color, 20%) } // Generic.Heading
-    .gi    { color: $text-color; background-color: lighten($background-color, 20%) } // Generic.Inserted
-    .gi .x { color: $text-color; background-color: lighten($background-color, 15%) } // Generic.Inserted.Specific
+    .gi    { color: $text-color; background-color: #e6ffed } // Generic.Inserted
+    .gi .x { color: $text-color; background-color: #cdffd8 } // Generic.Inserted.Specific
     .go    { color: darken($grey-color, 10%) } // Generic.Output
     .gp    { color: darken($grey-color, 20%) } // Generic.Prompt
     .gs    { font-weight: bold; color: $text-color } // Generic.Strong
@@ -64,4 +64,52 @@
     .vg    { color: $blue-color-dark } // Name.Variable.Global
     .vi    { color: $blue-color-dark } // Name.Variable.Instance
     .il    { color: #006633 } // Literal.Number.Integer.Long
+}
+
+// Dark mode syntax highlighting overrides
+@mixin dark-syntax {
+    .highlight {
+        .c, .cm, .c1         { color: #8b949e } // Comments
+        .cs, .cp             { color: #8b949e }
+        .k, .kc, .kd,
+        .kp, .kr             { color: #ff7b72 } // Keywords
+        .kt                  { color: #79c0ff }
+        .o, .ow              { color: #79c0ff } // Operators
+        .m, .mf, .mh,
+        .mi, .mo, .il        { color: #79c0ff } // Numbers
+        .s, .sb, .sc, .sd,
+        .s2, .se, .sh, .si,
+        .sx, .s1             { color: #a5d6ff } // Strings
+        .sr                  { color: #a5d6ff }
+        .ss                  { color: #a5d6ff }
+        .na                  { color: #7ee787 } // Attributes
+        .nb, .bp             { color: #e6edf3 } // Builtins
+        .nc                  { color: #7ee787; font-weight: bold } // Class
+        .no, .nv, .vc,
+        .vg, .vi             { color: #79c0ff } // Constants/Variables
+        .ni                  { color: #ffa657 } // Entity
+        .ne, .nf             { color: #d2a8ff } // Function/Exception
+        .nn                  { color: #e6edf3 } // Namespace
+        .nt                  { color: #7ee787 } // Tag
+        .ge                  { color: #8b949e; font-style: italic }
+        .gr, .gt             { color: #ff7b72 } // Error/Traceback
+        .gh, .gu             { color: #e6edf3 }
+        .go, .gp             { color: #8b949e }
+        .gs                  { color: #e6edf3 }
+        .gd                  { color: #ffdcd7; background-color: #67060c }
+        .gd .x               { color: #ffdcd7; background-color: #8e1519 }
+        .gi                  { color: #aff5b4; background-color: #033a16 }
+        .gi .x               { color: #aff5b4; background-color: #0f5323 }
+        .w                   { color: #8b949e }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) {
+        @include dark-syntax;
+    }
+}
+
+html[data-theme="dark"] {
+    @include dark-syntax;
 }

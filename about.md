@@ -33,7 +33,7 @@ show_in_menu: true
 
 ## About Me
 
-Data Engineer with over 10 years of experience, passionate about crafting and maintaining high-volume data systems that drive business insights. Currently, I am the Principal Data Engineer at CipherHealth, where I collaborate on designing and implementing complex data pipelines. I am always looking for ways to optimize performance, integrate AI into our solutions, and enjoy mentoring engineers to deliver impactful solutions together.
+Data Engineer with over 10 years of experience, passionate about crafting and maintaining high-volume data systems that drive business insights. Currently, I am a Principal Data Engineer at CipherHealth, where I collaborate on designing and implementing complex data pipelines. I am always looking for ways to optimize performance, integrate AI into our solutions, and enjoy mentoring engineers to deliver impactful solutions together.
 
 I am proficient in a broad spectrum of technologies, including Python, SQL, MongoDB, Ruby, JavaScript, Apache Airflow, dbt, PostgreSQL, Snowflake and Terraform. I believe in learning from others and continually improving my skills to better serve our team's goals.
 

@@ -16,8 +16,8 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
   font-weight: 300;
-  color: $text-color;
-  background-color: $background-color;
+  color: var(--text-color);
+  background-color: var(--background-color);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -75,15 +75,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $blue-color-dark;
+  color: var(--blue-color-dark);
   text-decoration: none;
 
   &:visited {
-    color: $blue-color-dark;
+    color: var(--blue-color-dark);
   }
 
   &:hover {
-    color: $blue-color;
+    color: var(--blue-color);
     text-decoration: underline;
   }
 
@@ -96,9 +96,9 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $text-color;
-  border-left: 4px solid $blue-color;
-  background-color: $bg-color-dark;
+  color: var(--text-color);
+  border-left: 4px solid var(--blue-color);
+  background-color: var(--bg-color-dark);
   padding: $spacing-unit;
   margin: $spacing-unit 0;
   font-size: $base-font-size;
@@ -116,9 +116,9 @@ blockquote {
 pre,
 code {
   font-size: 15px;
-  border: 1px solid $blue-color;
+  border: 1px solid var(--blue-color);
   border-radius: 6px;
-  background-color: $bg-color-dark;
+  background-color: var(--bg-color-dark);
 }
 
 code {
@@ -148,7 +148,7 @@ pre {
     vertical-align: middle;
 
     path {
-      fill: $grey-color;
+      fill: var(--grey-color);
     }
   }
 }
@@ -170,11 +170,11 @@ th,
 td {
   padding: 8px 12px;
   text-align: left;
-  border-bottom: 1px solid $grey-color-light;
+  border-bottom: 1px solid var(--grey-color-light);
 }
 
 tbody tr:nth-child(even) {
-  background-color: $blue-color-light;
+  background-color: var(--blue-color-light);
 }
 
 /**
@@ -182,14 +182,14 @@ tbody tr:nth-child(even) {
  */
 
 .callout {
-  border-left: 6px solid $brand-color;
-  background-color: $blue-color-light;
+  border-left: 6px solid var(--brand-color);
+  background-color: var(--blue-color-light);
   padding: 1.5em;
   margin: 1.5em 0;
   border-radius: 6px;
 
   strong {
-    color: $brand-color;
+    color: var(--brand-color);
     font-weight: bold;
   }
 }

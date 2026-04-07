@@ -11,6 +11,8 @@ $base-line-height:  1.5;
 
 $spacing-unit:      30px;
 
+// SCSS variables kept for compile-time computations only.
+// Runtime colors are managed via CSS custom properties below.
 $text-color:        #111;
 $background-color:  #fdfdfd;
 $bg-color-dark:     #f8f8f8;
@@ -24,6 +26,52 @@ $grey-color-dark:   darken($grey-color, 25%);
 $blue-color:        darken(#a6c9e2, 10%);
 $blue-color-light:  lighten($blue-color, 30%);
 $blue-color-dark:   darken($blue-color, 25%);
+
+// CSS custom properties — light mode defaults
+:root {
+  --text-color:          #{$text-color};
+  --background-color:    #{$background-color};
+  --bg-color-dark:       #{$bg-color-dark};
+  --brand-color:         #{$brand-color};
+  --button-color:        #{$button-color};
+  --button-color-hover:  #{darken($button-color, 10%)};
+  --grey-color:          #{$grey-color};
+  --grey-color-light:    #{$grey-color-light};
+  --grey-color-dark:     #{$grey-color-dark};
+  --blue-color:          #{$blue-color};
+  --blue-color-light:    #{$blue-color-light};
+  --blue-color-dark:     #{$blue-color-dark};
+  --surface-color:       #ffffff;
+  --input-border-color:  #cccccc;
+}
+
+// Dark mode overrides — applied via OS preference unless manually overridden
+@mixin dark-theme {
+  --text-color:          #d4d4d4;
+  --background-color:    #1e1e1e;
+  --bg-color-dark:       #282828;
+  --brand-color:         #5a9fd4;
+  --button-color:        #5a9fd4;
+  --button-color-hover:  #3a7db5;
+  --grey-color:          #999999;
+  --grey-color-light:    #383838;
+  --grey-color-dark:     #c0c0c0;
+  --blue-color:          #7fb3d3;
+  --blue-color-light:    #1e3040;
+  --blue-color-dark:     #7fb3d3;
+  --surface-color:       #252525;
+  --input-border-color:  #444444;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    @include dark-theme;
+  }
+}
+
+:root[data-theme="dark"] {
+  @include dark-theme;
+}
 
 // Width of the content area
 $content-width:     800px;
