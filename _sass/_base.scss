@@ -137,6 +137,59 @@ pre {
 }
 
 /**
+ * Code block copy button
+ */
+.highlight {
+  position: relative;
+}
+
+.code-block-wrapper {
+  position: relative;
+}
+
+.copy-code-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+  border: 1px solid var(--grey-color-light);
+  border-radius: 6px;
+  background: var(--bg-color-dark);
+  opacity: 0;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+
+  svg {
+    width: 12px;
+    height: 12px;
+
+    path {
+      fill: var(--grey-color);
+    }
+  }
+
+  &:hover {
+    background-color: var(--grey-color-light);
+  }
+
+  &.copied svg path {
+    fill: var(--blue-color-dark);
+  }
+}
+
+.highlight:hover .copy-code-btn,
+.highlight .copy-code-btn:focus,
+.code-block-wrapper:hover .copy-code-btn,
+.code-block-wrapper .copy-code-btn:focus {
+  opacity: 1;
+}
+
+/**
  * Icons
  */
 .icon {
