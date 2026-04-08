@@ -30,15 +30,16 @@ show_in_menu: false
                 <li>
                     {% assign tag_slug = tag.title | sluggify %}
                     {% assign tag_count = site.tags[tag_slug] | size %}
-                    {% assign tag_weight = tag_count | divided_by: max_tags_count %}
-                    {% assign tag_weight = tag_weight | times: 10 %}
-                    {% assign tag_weight = tag_weight | round %}
+                    {% assign tag_weight = tag_count | times: 10 | divided_by: max_tags_count | round %}
 
-                    {% if tag_weight == 0 %}
+                    {% if tag_weight < 1 %}
                         {% assign tag_weight = 1 %}
                     {% endif %}
+                    {% if tag_weight > 10 %}
+                        {% assign tag_weight = 10 %}
+                    {% endif %}
                     
-                    <a href="{{tag.url}}" data-weight="{{tag_weight}}" data-count="{{tag_count}}">#{{tag.title}}</a>
+                    <a href="{{tag.url}}" data-weight="{{tag_weight}}" data-count="{{tag_count}}">#{{tag.title | downcase}}</a>
                 </li>
             {% endfor %}
         </ul>

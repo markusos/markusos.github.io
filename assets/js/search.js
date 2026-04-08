@@ -65,11 +65,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
                     // Post metadata
                     const span = document.createElement('span');
-                    span.textContent = `${item.date} • ${item.tags.map(element => '#' + element).join(' ')}`;
+                    span.className = 'post-meta';
+                    span.textContent = item.date;
+
+                    if (item.tags && item.tags.length > 0) {
+                        span.textContent += ' • ';
+                        const tagsSpan = document.createElement('span');
+                        tagsSpan.className = 'tags';
+                        item.tags.forEach(tag => {
+                            const tagLink = document.createElement('a');
+                            tagLink.href = `${baseUrl}/tags/${tag.toLowerCase()}/`;
+                            tagLink.textContent = '# ' + tag.toLowerCase();
+                            tagsSpan.appendChild(tagLink);
+                        });
+                        span.appendChild(tagsSpan);
+                    }
+
                     li.appendChild(span);
 
                     // Post title
                     const a = document.createElement('a');
+                    a.className = 'post-link';
                     a.href = item.url;
                     a.textContent = decodeHtml(item.title);
                     li.appendChild(a);

@@ -17,7 +17,7 @@ layout: default
        •
       <span class="post-meta tags">
         {% for tag in page.tags %}
-          <a href="{% include tag_url tag=tag %}">#{{ tag }}</a>
+          <a href="{% include tag_url tag=tag %}"># {{ tag | downcase }}</a>
         {% endfor %}
       </span>
       {%- endif -%}
@@ -27,5 +27,20 @@ layout: default
   <article class="post-content">
     {{ content }}
   </article>
+
+  <nav class="post-nav">
+    <ul class="pagination">
+      {% if page.next %}
+        <li><a href="{{ page.next.url | prepend: site.baseurl }}" aria-label="Next">&laquo;</a></li>
+      {% else %}
+        <li class="disabled"><a href="#" aria-label="Next">&laquo;</a></li>
+      {% endif %}
+      {% if page.previous %}
+        <li><a href="{{ page.previous.url | prepend: site.baseurl }}" aria-label="Previous">&raquo;</a></li>
+      {% else %}
+        <li class="disabled"><a href="#" aria-label="Previous">&raquo;</a></li>
+      {% endif %}
+    </ul>
+  </nav>
 
 </div>
