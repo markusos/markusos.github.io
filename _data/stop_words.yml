@@ -6,13 +6,18 @@ words:
   - again
   - against
   - all
+  - also
   - am
   - an
   - and
+  - another
   - any
   - are
+  - around
   - as
   - at
+  - back
+  - based
   - be
   - because
   - been
@@ -23,19 +28,38 @@ words:
   - both
   - but
   - by
+  - came
   - can
+  - come
+  - comes
+  - could
   - did
+  - different
   - do
   - does
   - doing
   - don
   - down
+  - due
   - during
   - each
+  - either
+  - even
+  - every
+  - example
   - few
+  - first
+  - following
   - for
   - from
   - further
+  - get
+  - gets
+  - give
+  - given
+  - go
+  - goes
+  - got
   - had
   - has
   - have
@@ -49,28 +73,52 @@ words:
   - himself
   - his
   - how
+  - however
   - i
   - if
   - in
+  - including
+  - instead
   - into
   - is
   - it
   - its
   - itself
   - just
+  - keep
+  - keeps
+  - know
+  - knows
+  - last
+  - let
+  - like
+  - look
+  - lot
+  - made
+  - make
+  - makes
+  - many
+  - may
   - me
   - more
   - most
+  - much
   - my
   - myself
+  - need
+  - needs
+  - new
+  - next
   - no
   - nor
   - not
   - now
   - of
   - off
+  - often
   - on
   - once
+  - one
   - only
   - or
   - other
@@ -80,14 +128,35 @@ words:
   - out
   - over
   - own
+  - per
+  - put
+  - puts
+  - quite
+  - really
+  - right
+  - run
+  - runs
   - s
+  - said
   - same
+  - say
+  - says
+  - see
+  - seem
+  - seems
+  - set
+  - sets
   - she
   - should
+  - since
   - so
   - some
+  - something
+  - still
   - such
   - t
+  - take
+  - takes
   - than
   - that
   - the
@@ -99,21 +168,36 @@ words:
   - there
   - these
   - they
+  - think
+  - thinks
   - this
   - those
+  - though
   - through
+  - thus
   - to
   - too
+  - took
+  - two
   - under
   - until
   - up
+  - use
+  - used
+  - using
   - very
+  - via
+  - want
+  - wants
   - was
   - we
+  - well
+  - went
   - were
   - what
   - when
   - where
+  - whether
   - which
   - while
   - who
@@ -121,8 +205,19 @@ words:
   - why
   - will
   - with
+  - within
+  - without
+  - work
+  - works
+  - yet
   - you
   - your
   - yours
   - yourself
   - yourselves
+  # HTML entity artifacts from escape filter
+  - quot
+  - amp
+  - gt
+  - lt
+  - 39
