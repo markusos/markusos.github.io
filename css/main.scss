@@ -44,6 +44,7 @@ $blue-color-dark:   darken($blue-color, 25%);
   --surface-color:       #ffffff;
   --input-border-color:  #cccccc;
   --link-hover-color:    #{$blue-color};
+  --card-border-color:   #{$grey-color};
 }
 
 // Dark mode overrides — applied via OS preference unless manually overridden
@@ -63,6 +64,7 @@ $blue-color-dark:   darken($blue-color, 25%);
   --surface-color:       #252525;
   --input-border-color:  #444444;
   --link-hover-color:    #4a85aa;
+  --card-border-color:   #484848;
 }
 
 @media (prefers-color-scheme: dark) {

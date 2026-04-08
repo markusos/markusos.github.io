@@ -1,0 +1,8 @@
+{% if page.url %}
+<section class="related-posts" id="related-posts" style="display:none"
+  data-url="{{ page.url | relative_url }}"
+  data-baseurl="{{ site.baseurl }}">
+  <h3 class="related-posts-title">Related Posts</h3>
+  <ul class="related-posts-list"></ul>
+</section>
+{% endif %}
