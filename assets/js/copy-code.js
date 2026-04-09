@@ -39,14 +39,14 @@
       });
 
       // Wrap pre in a positioned container if not already inside .highlight
-      if (!pre.closest('.highlight')) {
+      var highlight = pre.parentElement.closest('.highlight');
+      if (!highlight) {
         var wrapper = document.createElement('div');
         wrapper.className = 'code-block-wrapper';
         pre.parentNode.insertBefore(wrapper, pre);
         wrapper.appendChild(pre);
         wrapper.appendChild(btn);
       } else {
-        var highlight = pre.closest('.highlight');
         highlight.style.position = 'relative';
         highlight.appendChild(btn);
       }
