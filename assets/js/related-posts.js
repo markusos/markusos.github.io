@@ -67,7 +67,7 @@
           score: cosine(currentVec, toVector(p)),
           date: new Date(p.date)
         }))
-        .filter(c => c.score > 0)
+        .filter(c => c.score > 0.10)
         .sort((a, b) => b.score !== a.score ? b.score - a.score : b.date - a.date)
         .slice(0, MAX_RESULTS);
 
